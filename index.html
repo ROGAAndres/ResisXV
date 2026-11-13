@@ -1,2 +1,883 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=Marketing_Site_ResisXV.html"><title>ResisXV</title></head><body></body></html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="ResisXV: an employer-supported near-work lodging concept. Explore the research, proposed experience, roadmap, requirements and cumulative design record."><meta name="theme-color" content="#193c34"><title>ResisXV — One night near work</title>
+<style>
+:root{--paper:#f7f6f0;--ink:#183c33;--text:#283e37;--muted:#61746b;--line:#d4dcd1;--white:#fff;--sage:#e4eadd;--lime:#dce987;--amber:#80632c;--max:1180px}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--paper);color:var(--text);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit}a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid #a18c28;outline-offset:5px}button,input{font:inherit}img{display:block;max-width:100%}.wrap{max-width:var(--max);margin:auto;padding:0 40px}.skip{position:absolute;left:12px;top:-100px;background:white;padding:10px;z-index:10}.skip:focus{top:10px}.site-nav{position:sticky;top:0;z-index:5;background:rgba(247,246,240,.97);border-bottom:1px solid var(--line)}.nav-inner{height:82px;display:flex;align-items:center;justify-content:space-between;gap:25px}.brand{text-decoration:none;font-size:25px;font-weight:760;letter-spacing:-1.3px}.brand span{font-weight:400;margin-left:3px;color:var(--muted)}nav{display:flex;gap:25px;align-items:center}nav a{text-decoration:none;font-size:13px;font-weight:600}.nav-end{border:1px solid var(--ink);border-radius:99px;padding:8px 17px}.eyebrow{display:flex;gap:10px;align-items:center;text-transform:uppercase;font-size:11px;font-weight:700;letter-spacing:1.8px}.dot{width:7px;height:7px;background:#547a51;border-radius:100%}.hero{padding:78px 0 55px}.hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:68px;align-items:center}h1,h2,h3,p{margin-top:0}h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-2.7px;line-height:1.08}h1{font-size:clamp(50px,5.8vw,79px);margin:26px 0}h1 em{font-style:italic;color:#62816a}.intro{max-width:580px;font-size:18px;color:var(--muted);line-height:1.65}.actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:29px 0 22px}.btn{display:inline-flex;align-items:center;gap:24px;border:1px solid var(--ink);border-radius:5px;padding:13px 20px;background:var(--ink);color:white;text-decoration:none;font-size:14px;font-weight:600}.btn:hover{background:#2a5145}.btn.secondary{background:transparent;color:var(--ink)}.small{font-size:12px;color:var(--muted)}.hero-visual{background:var(--sage);padding:31px 31px 0;border-radius:120px 120px 8px 8px;min-height:440px;position:relative;overflow:hidden}.visual-tag{font-size:10px;text-transform:uppercase;letter-spacing:1.8px;display:block;text-align:center;margin:10px 0 21px}.window{height:167px;border:1px solid #a7b9a1;position:relative;margin:0 25px;background:linear-gradient(145deg,#d4dfc5,#edf0dc)}.window:before{content:"";position:absolute;left:50%;height:100%;width:1px;background:#a7b9a1}.window:after{content:"";position:absolute;top:50%;width:100%;height:1px;background:#a7b9a1}.room-line{width:100%;height:1px;background:#adbea7;margin-top:30px;transform:rotate(-8deg)}.bed{height:64px;margin:24px 13px 30px;background:#fafbf4;border:1px solid #adbea7;border-radius:9px 9px 0 0;position:relative;box-shadow:0 13px 0 -1px #bdcbb2}.pillow{width:68px;height:27px;position:absolute;top:-12px;left:15px;background:#fff;border:1px solid #b8c7ae;border-radius:7px}.visual-caption{background:#fffdf6;position:relative;margin:32px -8px -1px;padding:19px 22px;display:flex;justify-content:space-between;gap:12px;border-radius:5px 5px 0 0}.visual-caption b{font-size:15px;display:block}.visual-caption span{font-size:11px;color:var(--muted)}.circle-arrow{height:37px;width:37px;border-radius:50%;background:var(--lime);display:grid;place-items:center}.facts{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);margin-top:55px;padding-top:23px;gap:25px}.facts b{font-size:26px;font-weight:500;letter-spacing:-1px;display:block}.facts span{font-size:12px;color:var(--muted)}section{padding:75px 0;border-top:1px solid var(--line)}.section-top{display:flex;align-items:start;justify-content:space-between;gap:40px;margin-bottom:36px}.section-top h2{font-size:46px;margin:12px 0 0}.section-top p{max-width:410px;font-size:15px;color:var(--muted);margin:30px 0 0}.section-label{font-size:11px;text-transform:uppercase;letter-spacing:1.7px;font-weight:700}.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:38px}.principle{border-top:2px solid var(--ink);padding-top:20px}.number{font-size:11px;letter-spacing:1px;color:var(--muted)}.principle h3{font-size:20px;margin:13px 0 10px;font-weight:500}.principle p{font-size:14px;color:var(--muted)}.personas{margin-top:46px}.persona{display:grid;grid-template-columns:.8fr 1.1fr 1.3fr;gap:35px;border-top:1px solid var(--line);padding:22px 0;font-size:14px}.persona h3{font-size:18px;margin-bottom:4px;font-weight:600}.persona span{font-size:11px;color:var(--muted)}.persona p{margin:0}.persona .caution{color:var(--muted)}.journey{display:grid;grid-template-columns:repeat(6,1fr);gap:0;margin:35px 0 45px}.journey div{border-top:1px solid var(--ink);padding:16px 17px 0 0;position:relative}.journey div:before{content:"";position:absolute;width:7px;height:7px;background:var(--ink);border-radius:50%;top:-4px}.journey small{font-size:10px;color:var(--muted)}.journey h3{font-size:17px;font-weight:500;margin:8px 0}.journey p{font-size:12px;color:var(--muted);padding-right:10px}.prototype{display:grid;grid-template-columns:1fr 1fr;background:#e9ede3;border-radius:7px;overflow:hidden;margin-top:25px}.prototype-copy{padding:45px}.prototype-copy h3{font:36px/1.15 Georgia,serif;font-weight:400;letter-spacing:-1px}.prototype-copy p{font-size:14px;color:var(--muted)}.screens{display:flex;gap:15px;padding:30px 30px 0;align-items:start;justify-content:center;height:395px;overflow:hidden}.screens img{width:43%;box-shadow:0 8px 35px #193c3310;background:white;border-radius:8px}.screens img:last-child{margin-top:35px}.table-scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:14px;text-align:left}th{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:600;padding:15px 16px 15px 0;border-bottom:1px solid var(--ink)}td{padding:23px 25px 23px 0;border-bottom:1px solid var(--line);vertical-align:top}td:first-child{min-width:120px}td b{font-weight:600}.phase{font-family:Georgia,serif;font-size:24px;display:block}.table-note{font-size:12px;color:var(--muted);margin:19px 0 0}.dark{background:var(--ink);color:var(--paper)}.dark .section-top p,.dark .section-label{color:#c3d0c5}.documents{display:grid;grid-template-columns:1fr 1fr;gap:0 45px}.doc{padding:21px 0;border-top:1px solid #567163;display:flex;justify-content:space-between;gap:20px}.doc h3{font-size:18px;font-weight:500;margin-bottom:5px}.doc p{font-size:12px;color:#c0d1c5;margin-bottom:10px}.doc a{font-size:12px;text-underline-offset:5px;margin-right:15px}.doc-icon{color:var(--lime);font-size:24px}.badge{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.6px;color:#3d6248;padding:4px 8px;background:#e6eddf;border-radius:3px;white-space:nowrap}.badge.pending{color:#7e6227;background:#f1ebda}.pending-list{padding:0;list-style:none}.pending-list li{display:flex;justify-content:space-between;gap:25px;border-bottom:1px solid var(--line);padding:17px 0}.pending-list b{font-size:15px;font-weight:500}.pending-list p{font-size:13px;color:var(--muted);margin:4px 0 0}.record-heading{display:flex;gap:25px;align-items:end;justify-content:space-between;margin-bottom:28px}.record-heading h2{font-size:46px;margin:10px 0}.record-links{font-size:12px;display:flex;gap:20px;white-space:nowrap}.record-tools{display:flex;gap:20px;justify-content:space-between;align-items:center;background:var(--sage);padding:15px 18px;border-radius:5px;margin-bottom:20px}.record-tools label{font-size:12px}.record-tools input{padding:9px 13px;border:1px solid #a2b69e;border-radius:4px;background:#fdfdf7;width:270px;color:var(--ink);font-size:13px}.record-tools button{border:0;background:transparent;text-decoration:underline;text-underline-offset:4px;font-size:12px;color:var(--ink);cursor:pointer}.record-section{border-bottom:1px solid var(--line)}.record-section summary{list-style:none;padding:21px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:17px;font-weight:500;cursor:pointer}.record-section summary::-webkit-details-marker{display:none}.expand{font-size:24px;font-weight:300}.record-section[open] .expand{transform:rotate(45deg)}.record-copy{font-size:14px;line-height:1.75;padding:6px 0 32px;max-width:100%;overflow-wrap:anywhere}.record-copy h1{font-size:36px}.record-copy h2{font-family:inherit;font-size:23px;letter-spacing:-.4px;line-height:1.3;margin:30px 0 18px}.record-copy h3{font-size:18px;margin:30px 0 14px}.record-copy h4{font-size:16px}.record-copy p{margin:0 0 15px}.record-copy li{margin-bottom:8px}.record-copy pre{font:12px/1.6 ui-monospace,monospace;overflow:auto;background:#edf0e7;padding:20px;border-radius:4px}.record-copy table{display:block;max-width:100%;overflow-x:auto;font-size:12px;margin:25px 0}.record-copy td,.record-copy th{padding:12px 18px 12px 8px;min-width:130px}.record-copy blockquote{border-left:2px solid #859982;padding-left:18px;margin-left:0;color:var(--muted)}.empty{display:none;font-size:14px;color:var(--muted)}footer{border-top:1px solid var(--line);padding:30px 0 45px}.footer-inner{display:flex;justify-content:space-between;align-items:start;gap:25px;font-size:12px;color:var(--muted)}footer a{margin-left:18px}footer b{display:block;font-size:16px;color:var(--ink);margin-bottom:6px}.reduced-note{font-size:12px;color:var(--muted);max-width:720px}.nav-mobile{display:none}
+@media(max-width:900px){.wrap{padding:0 25px}.hero-grid{gap:30px}.hero-visual{min-height:390px;padding:25px 20px 0}.section-top h2,.record-heading h2{font-size:38px}.section-top{gap:25px}.principles{gap:25px}.prototype-copy{padding:30px}.screens{height:360px;padding:30px 15px 0}.journey{grid-template-columns:repeat(3,1fr);gap:25px 0}.hero{padding-top:55px}}
+@media(max-width:650px){.wrap{padding:0 21px}.nav-inner{height:68px}.brand{font-size:23px}nav{gap:15px}nav a{font-size:11px}nav a:nth-child(1),nav a:nth-child(2){display:none}.nav-end{padding:7px 11px}.hero{padding:40px 0}.hero-grid{grid-template-columns:1fr;gap:32px}h1{font-size:54px;letter-spacing:-2.4px}.intro{font-size:16px}.hero-visual{min-height:365px;max-width:420px;width:100%;margin:auto;padding-top:18px}.window{height:125px}.room-line{margin-top:20px}.bed{margin-bottom:16px}.visual-caption{margin-top:24px}.facts{grid-template-columns:1fr 1fr;gap:23px;margin-top:35px}.facts b{font-size:24px}section{padding:49px 0}.section-top{display:block;margin-bottom:29px}.section-top p{margin-top:18px}.section-top h2,.record-heading h2{font-size:36px;letter-spacing:-1.6px}.principles{grid-template-columns:1fr;gap:18px}.principle{padding-top:15px}.principle h3{margin-top:7px}.persona{grid-template-columns:1fr;gap:10px;padding:21px 0}.journey{grid-template-columns:repeat(2,1fr)}.prototype{grid-template-columns:1fr}.prototype-copy{padding:28px 25px 5px}.prototype-copy h3{font-size:31px}.screens{height:360px;padding-top:10px}.screens img{max-width:155px}.documents{grid-template-columns:1fr}.pending-list li{gap:15px}.record-heading{display:block}.record-links{margin-top:20px}.record-tools{align-items:start;flex-direction:column;gap:10px}.record-tools input{width:100%;margin-top:7px}.record-tools label{width:100%}.record-tools div{display:flex;gap:20px}.record-section summary{font-size:15px}.footer-inner{flex-direction:column}footer a{margin:0 18px 0 0}.table-scroll table{min-width:660px}.btn{padding:12px 16px}.eyebrow{font-size:9px;letter-spacing:1.3px}.reduced-note{font-size:11px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{.site-nav,.actions,.record-tools,.record-links,.hero-visual,.screens{display:none}.wrap{padding:0;max-width:none}body{background:white;color:black;font-size:11pt}section{padding:20px 0}.hero{padding:20px 0}.hero-grid{display:block}h1{font-size:40pt}.dark{background:white;color:black}.documents{display:block}.doc p{color:black}.record-section summary{font-size:14pt}.record-copy{font-size:10pt}.record-section{break-inside:auto}.record-section summary{break-after:avoid}.record-copy table{display:table;font-size:8pt}.facts{margin-top:20px}.record-heading h2{font-size:25pt}a{color:black}}
+</style></head><body><a class="skip" href="#main">Skip to content</a>
+<header class="site-nav"><div class="wrap nav-inner"><a class="brand" href="#top" aria-label="ResisXV home">Resis<span>XV</span></a><nav aria-label="Main navigation"><a href="#idea">The idea</a><a href="#roadmap">Roadmap</a><a href="#deliverables">Deliverables</a><a class="nav-end" href="#design-record">Design record &gt;</a></nav></div></header>
+<main id="main"><div class="wrap" id="top"><div class="hero"><div class="hero-grid"><div><div class="eyebrow"><span class="dot"></span>Northwestern · Product management project</div><h1>A night near work.<br><em>A choice that fits.</em></h1><p class="intro">ResisXV explores occasional, employer-supported stays near work for people whose long commutes leave little time to recover.</p><p class="intro" style="font-size:15px">The goal is a feasible night of rest, with a clear personal cost and the freedom to return home.</p><div class="actions"><a class="btn" href="#design-record">Explore the design record <span aria-hidden="true">&gt;</span></a><a class="btn secondary" href="#deliverables">View the work</a></div><p class="small">Course concept · Pilot not operating · Module 6 work in progress</p></div><div class="hero-visual" role="img" aria-label="Illustration of a simple room near work; a proposed service, not a listed property"><span class="visual-tag">An occasional stay. A practical decision.</span><div class="window"></div><div class="room-line"></div><div class="bed"><span class="pillow"></span></div><div class="visual-caption"><div><b>One night. Clearly agreed.</b><span>Accommodation + authorized support + worker choice</span></div><div class="circle-arrow" aria-hidden="true">&gt;</div></div></div></div><div class="facts"><div><b>04</b><span>Interview summary records</span></div><div><b>12</b><span>Proposed interface screens</span></div><div><b>03–06</b><span>Modules in the running record</span></div><div><b>22</b><span>Documented workflows</span></div></div></div></div>
+<section id="idea"><div class="wrap"><div class="section-top"><div><span class="section-label">01 / The idea</span><h2>Rest is the job.<br>A stay is one option.</h2></div><p>A shorter journey is useful only if the room, funding and household arrangements work for the person. Returning home remains a valid choice.</p></div><div class="principles"><article class="principle"><span class="number">01</span><h3>Recover Time</h3><p>Explore whether one nearby night can create more time to recover between workdays. Actual rest gains still need to be measured.</p></article><article class="principle"><span class="number">02</span><h3>Clear Support</h3><p>Know the company contribution and personal amount before accepting a stay. An estimate is different from an approved commitment.</p></article><article class="principle"><span class="number">03</span><h3>Choose Freely</h3><p>Consider a specific night while keeping the primary home. Support and household needs differ, so routine weekday use is not assumed.</p></article></div><div class="personas"><article class="persona"><div><h3>Sebastián</h3><span>I1 · Primary worker persona</span></div><p>Reports roughly two hours of outbound travel from Chimalhuacán to the Barranca del Muerto area and late returns.</p><p class="caution">Cannot independently fund lodging. A suitable room and an authorized contribution are prerequisites, not existing commitments.</p></article><article class="persona"><div><h3>Angélica</h3><span>I3 · Different household needs</span></div><p>Reports a long commute, but needs to return for household responsibilities. An exceptional night may fit better than recurring stays.</p><p class="caution">Her account challenges the idea that every long-distance commuter wants accommodation near work.</p></article><article class="persona"><div><h3>The employer buyer</h3><span>I2 informs the role</span></div><p>An authorized approver would define a shared fund, allocation rules and a review route, then account for the actual spending.</p><p class="caution">The interviewed buyer reference is not established as Sebastián’s employer. The proposed funding is not authorized.</p></article></div><p class="reduced-note">Evidence basis: four supplied summary records, including one unresolved I4 identity/count. These are qualitative accounts, not population estimates. The complete record retains the research limits and earlier persona revisions.</p></div></section>
+<section id="experience"><div class="wrap"><div class="section-top"><div><span class="section-label">02 / The proposed experience</span><h2>One night,<br>step by step.</h2></div><p>The worker, employer and coordinator each have a role. A request becomes a confirmed stay only after both funding and provider checks pass.</p></div><div class="journey"><div><small>01</small><h3>Plan</h3><p>Consider the next workday and responsibilities at home.</p></div><div><small>02</small><h3>Recognize</h3><p>Decide whether a particular night is worth exploring.</p></div><div><small>03</small><h3>Check</h3><p>Check eligibility, company support and personal cost.</p></div><div><small>04</small><h3>Review</h3><p>Assess suitable accommodation and the return-home alternative.</p></div><div><small>05</small><h3>Request</h3><p>Accept specific terms and await a clear decision.</p></div><div><small>06</small><h3>Reflect</h3><p>Arrive, complete the stay and evaluate cost and rest.</p></div></div><div class="prototype"><div class="prototype-copy"><span class="section-label">A prototype, not a booking system</span><h3>Make the commitment<br>easy to understand.</h3><p>The twelve wireframes distinguish pending from confirmed support, show the accepted personal cost and provide cancellation and exception paths.</p><p>These screens contain fictional demo prices. They do not reserve rooms, approve funding or collect payments.</p><a href="PRD_ResisXV.pdf">Read the illustrated use cases &gt;</a></div><div class="screens"><img src="F01.svg" alt="Demo screen F01: choose one night and enter a personal cost limit" loading="lazy"><img src="F04.svg" alt="Demo screen F04: review a quote, contribution, personal cost and terms" loading="lazy"></div></div></div></section>
+<section id="roadmap"><div class="wrap"><div class="section-top"><div><span class="section-label">03 / The current proposed roadmap</span><h2>Build to learn.<br>Continue on evidence.</h2></div><p>Three releases sit within a twelve-week planning horizon. Staffing, funding and a calendar start remain unconfirmed.</p></div><div class="table-scroll"><table><thead><tr><th>Release / target</th><th>Goal</th><th>Activities</th><th>Expected result</th></tr></thead><tbody><tr><td><span class="phase">R1</span>Week 6</td><td><b>Test one supported stay</b></td><td>Verify authority and offers; test worker understanding; prepare funding, confirmation, support and reconciliation.</td><td>A controlled pilot only if readiness gates pass. Otherwise, remain in prototype mode.</td></tr><tr><td><span class="phase">R2</span>Week 9</td><td><b>Reduce observed friction</b></td><td>Improve relevant comparisons, decision clarity, issue reporting and charge-dispute recovery.</td><td>Changes driven by actual worker and operator findings, rather than every planned feature.</td></tr><tr><td><span class="phase">R3</span>Week 12</td><td><b>Decide whether to continue</b></td><td>Review use, voluntary outcomes, company spending, coordination effort and renewal.</td><td>Continue, revise, retain a simpler concierge service or stop.</td></tr></tbody></table></div><p class="table-note">This is the currently documented proposal. The requested correction against the original plan remains open until that source is identified. No release is represented as delivered.</p></div></section>
+<section class="dark" id="deliverables"><div class="wrap"><div class="section-top"><div><span class="section-label">04 / The work so far</span><h2>Read the argument.<br>Inspect the details.</h2></div><p>The completed documents are available here. “Prepared” describes document status; it does not mean that the service, pricing or outcomes are validated.</p></div><div class="documents"><article class="doc"><div><h3>Product requirements</h3><p>Personas, six use cases, MVC, features, metrics, costs and risks.</p><a href="PRD_ResisXV.pdf">Open PDF &gt;</a><a href="PRD_ResisXV.md">Markdown source &gt;</a></div><span class="doc-icon" aria-hidden="true">&gt;</span></article><article class="doc"><div><h3>Positioning</h3><p>Moore statement, three core scenarios, messaging pillars and source trace.</p><a href="Positioning_ResisXV.md">Read positioning &gt;</a></div><span class="doc-icon" aria-hidden="true">&gt;</span></article><article class="doc"><div><h3>Go-to-market checklist</h3><p>Route decisions, eight business questions and 27 readiness items.</p><a href="GTM_Checklist_ResisXV.md">Read the checklist &gt;</a></div><span class="doc-icon" aria-hidden="true">&gt;</span></article><article class="doc"><div><h3>Cumulative design record</h3><p>Modules 3–6, 22 workflows, decisions, actual checks and remaining work.</p><a href="ResisXV_Module6_Design_Document.pdf">Open PDF &gt;</a><a href="DESIGN_DOC_ResisXV_Module6.md">Markdown source &gt;</a></div><span class="doc-icon" aria-hidden="true">&gt;</span></article></div></div></section>
+<section id="status"><div class="wrap"><div class="section-top"><div><span class="section-label">05 / Assignment status</span><h2>Keep the open<br>questions visible.</h2></div><p>The project is still being developed. Publishing the work makes it reviewable; it does not complete the remaining exercises or submit it to Canvas.</p></div><ul class="pending-list"><li><div><b>PRD, positioning and GTM documents</b><p>Prepared and available above, with assumptions and launch dependencies identified.</p></div><span class="badge">Prepared</span></li><li><div><b>Innovation Framework exercise</b><p>Complete the supplied workflow and retain its actual output.</p></div><span class="badge pending">Open</span></li><li><div><b>Three-example scorecard and second PRD iteration</b><p>Compare all required examples and record the reasoning behind the next revision.</p></div><span class="badge pending">Open</span></li><li><div><b>Original-plan alignment</b><p>Identify the earlier source, preserve the design/profiles and restore its goals, procedures and roadmap.</p></div><span class="badge pending">Open</span></li></ul><p class="table-note">Live stays also depend on authorized funding, suitable offers, accepted liabilities and staffed support. No paid demand or operating outcome is reported.</p></div></section>
+<section id="design-record"><div class="wrap"><div class="record-heading"><div><span class="section-label">06 / Full project context</span><h2>The running design record.</h2><p class="small">Complete recorded context, including historical entries and unrecorded module placeholders. Source record: November 12, 2026.</p></div><div class="record-links"><a href="ResisXV_Module6_Design_Document.pdf">PDF &gt;</a><a href="DESIGN_DOC_ResisXV_Module6.md">Markdown &gt;</a></div></div><div class="record-tools"><label for="record-search">Find a topic in the record<br><input id="record-search" type="search" placeholder="Try funding, persona, roadmap…" autocomplete="off"></label><div><button id="expand-all" type="button">Expand all</button><button id="collapse-all" type="button">Collapse all</button></div></div><p class="empty" id="no-results" role="status">No sections match. Try another word or clear the search.</p><div id="record-sections"><details id="record-part-0" class="record-section" ><summary><span>Record overview</span><span class="expand" aria-hidden="true">+</span></summary><div class="record-copy"><h1>Product Agent Design Doc</h1>
+<p><strong>Venture:</strong> ResisXV
+<strong>Student name(s):</strong> Andres Rojas
+<strong>Last updated:</strong> November 12 2026
+<strong>Modules recorded:</strong> 3, 4, 5, 6 (Module 6 recorded to date; assignment tasks remain open)
+<strong>Tools on record:</strong> 22 documented workflows (3 from Module 3; 7 from Module 4; 7 from Module 5; 5 from Module 6); no operational lodging integration claimed</p>
+<hr>
+</div></details>
+<details id="record-part-1" class="record-section" ><summary><span>How this document works</span><span class="expand" aria-hidden="true">+</span></summary><div class="record-copy"><h2>How this document works</h2>
+<p>This is your running record of every tool you build this semester. You do not write in it directly. At the end of each weekly session in this Project, type:</p>
+<blockquote>
+<p>record for module N in design document</p>
+</blockquote>
+<p>Claude reads the session, drafts the entries for that module, asks you for anything it cannot find, and returns a new copy of this file. Download it and replace the old DESIGN_DOC.md in the Project&#39;s files. That is the whole loop.</p>
+<p>Three rules Claude follows, and you should expect:</p>
+<ol>
+<li>Nothing gets invented. If a field was not discussed in the session, Claude asks you before writing it.</li>
+<li>Old entries are never rewritten. If a later week changes an earlier tool, a dated line goes under that tool&#39;s <strong>Revisions</strong>.</li>
+<li>Every field gets filled. Two are easy to skip and are graded hardest: <strong>Alternative considered and rejected</strong> and <strong>Honest limits</strong>. A tool with no stated limits has not been thought through.</li>
+</ol>
+<p>For any tool whose job is to judge or challenge something (a grill pass, a steelman challenge, a red-team pass, a consistency checker), <strong>Success criteria</strong> must include a demonstrated case proving the tool responds to what it is actually given. For a pass/fail tool, show it failing something. For a tool that generates critiques, show two different inputs producing materially different output.</p>
+<hr>
+</div></details>
+<details id="record-part-2" class="record-section" ><summary><span>Project Scaffolding</span><span class="expand" aria-hidden="true">+</span></summary><div class="record-copy"><h2>Project Scaffolding</h2>
+<p>One live scaffold. Claude updates it in place as files and folders are added. It should always show the project&#39;s current state, not a per-week log.</p>
+<p>If your team works in Claude Projects rather than a file system, the named files in your Project knowledge stand in for folders. The logical structure matters, not whether it is a real directory.</p>
+<pre><code>ResisXV/
+  project-context/
+    DESIGN_DOC_ResisXV_Module6.md
+  research-and-mrd/
+    MRD_ResisXV.md
+    ResisXV_Module4_MRD_and_Personas.docx
+    ResisXV_Visual_MRD.pdf
+    Journey_ResisXV.md
+    Open_Hypotheses_ResisXV.md
+  user-stories/
+    User_Story_Board_ResisXV.xlsx
+    Happy_Path_ResisXV.md
+  affinity-and-content/
+    Affinity_Map_ResisXV.pdf
+    Affinity_Themes_ResisXV.md
+    Content_Model_ResisXV.html
+  design/
+    ResisXV_Wireframes_English.pdf
+    Screen_Flow_ResisXV.md
+    Mood_Board_ResisXV.pdf
+    Visual_Design_Brief_ResisXV.md
+  reusable-tools/
+    Journey_Template_ResisXV.md
+    Privacy_5C_Checklist_ResisXV.md
+    Screen_Card_Template_ResisXV.md
+    Usability_Test_Plan_ResisXV.md
+    Visual_Review_Checklist_ResisXV.md
+    Submission_Consistency_Check_ResisXV.py
+  submission/
+    ResisXV_Module4_Design_Document.pdf
+    ResisXV_Module4_English_Documents.zip
+  module5/
+    MVC_ResisXV.md
+    Scrum_Board_ResisXV.xlsx
+    Release_Plan_ResisXV.md
+    Journey_Walkthrough_ResisXV.html
+    Journey_Workflow_ResisXV.xlsx
+    ResisXV_Final_MRD_Module5.docx
+    User_Story_Board_ResisXV_Module5.xlsx
+    ResisXV_Final_Wireframes_Module5.pdf
+    Decision_Log_ResisXV_Module5.md
+    ResisXV_Module5_Design_Document.pdf
+  module6/
+    PRD_ResisXV.md
+    PRD_ResisXV.docx
+    PRD_ResisXV.pdf
+    Positioning_ResisXV.md
+    GTM_Checklist_ResisXV.md
+    DESIGN_DOC_ResisXV_Module6.md
+    ResisXV_Module6_Design_Document.pdf
+</code></pre>
+<hr>
+</div></details>
+<details id="record-module-1" class="record-section" ><summary><span>Module 1: Idea and Vision</span><span class="expand" aria-hidden="true">+</span></summary><div class="record-copy"><h2>Module 1: Idea and Vision</h2>
+<p><strong>Status:</strong> not recorded
+<strong>Session date:</strong>
+<strong>Summary (2 to 3 sentences on what the team did this week):</strong></p>
+<h3>Tool 1.1</h3>
+<ul>
+<li><strong>Name:</strong></li>
+<li><strong>Job:</strong> What repeatable task does this replace?</li>
+<li><strong>Architecture choice:</strong> One-shot prompt, Skill, agent with memory, or workflow, and why this one.</li>
+<li><strong>Input:</strong></li>
+<li><strong>Output:</strong></li>
+<li><strong>Human checkpoint:</strong> Where does a person have to check the output before it is trusted?</li>
+<li><strong>Success criteria:</strong> How would you know if this got it wrong?</li>
+<li><strong>Alternative considered and rejected:</strong></li>
+<li><strong>Honest limits:</strong> What does this tool deliberately not check or do?</li>
+<li><strong>Revisions:</strong><ul>
+<li>(none)</li>
+</ul>
+</li>
+</ul>
+<h3>Tool 1.2</h3>
+<ul>
+<li><strong>Name:</strong></li>
+<li><strong>Job:</strong></li>
+<li><strong>Architecture choice:</strong></li>
+<li><strong>Input:</strong></li>
+<li><strong>Output:</strong></li>
+<li><strong>Human checkpoint:</strong></li>
+<li><strong>Success criteria:</strong></li>
+<li><strong>Alternative considered and rejected:</strong></li>
+<li><strong>Honest limits:</strong></li>
+<li><strong>Revisions:</strong><ul>
+<li>(none)</li>
+</ul>
+</li>
+</ul>
+<hr>
+</div></details>
+<details id="record-module-2" class="record-section" ><summary><span>Module 2: Opportunity Brief</span><span class="expand" aria-hidden="true">+</span></summary><div class="record-copy"><h2>Module 2: Opportunity Brief</h2>
+<p><strong>Status:</strong> not recorded
+<strong>Session date:</strong>
+<strong>Summary:</strong></p>
+<p><em>(tool entries added on record)</em></p>
+<hr>
+</div></details>
+<details id="record-module-3" class="record-section" ><summary><span>Module 3: Personas and Research</span><span class="expand" aria-hidden="true">+</span></summary><div class="record-copy"><h2>Module 3: Personas and Research</h2>
+<p><strong>Status:</strong> recorded; research preparation and MRD drafting completed, primary fieldwork pending
+<strong>Session date:</strong> October 15 2026, America/Matamoros
+<strong>Summary:</strong> Developed ResisXV&#39;s worker persona, five testable hypotheses, two interview guides, an evidence scoreboard and a preliminary MRD. The student challenged the financial realism of hotels and supplied work and travel premises; subsequent research refined the claim from absence of accommodation to possible unaffordability. No interviews, willingness-to-pay results or employer agreements were fabricated.</p>
+<h3>Tool 3.1</h3>
+<ul>
+<li><strong>Name:</strong> ResisXV MRD drafting and evidence workflow</li>
+<li><strong>Job:</strong> Turn a product objective, persona assumptions and available evidence into a structured first MRD and an explicit development recommendation.</li>
+<li><strong>Architecture choice:</strong> A human-reviewed chat workflow combining structured drafting, source retrieval, an evidence scoreboard and document generation. This was the workflow actually used; the class mrd-builder skill was unavailable in this session and has not been installed or edited.</li>
+<li><strong>Input:</strong> Existing ResisXV objective; Jose Martinez persona; the supplied class MRD outline, Fiddler example and Beauty on Demand hypotheses; the assignment rubric; the student&#39;s highlighted Word comments; and official contextual research.</li>
+<li><strong>Output:</strong> ResisXV_Module3_Corregido.docx: problem-led vision, persona, unmet needs, five hypotheses, guides, evidence, research plan, three interview questions, alternatives, use scenarios, risks, conditional recommendation and proposed skill instructions. The supporting packet follows this record in the submission PDF.</li>
+<li><strong>Human checkpoint:</strong> Check that the venture remains occasional near-work accommodation; verify personal details, actual budgets, routes and quotes; review source dates; and approve priorities before relying on the draft.</li>
+<li><strong>Success criteria:</strong> Include every first-draft section in the Canvas rubric; distinguish student inputs, sourced context and modeled assumptions; retain zero primary interviews; and link the recommendation to missing evidence. Demonstrated revision: the initial draft described hotels as alternatives without a budget comparison; after the student&#39;s objection, the revised draft added an affordability test and cost sensitivity rather than claiming that shorter travel proves demand.</li>
+<li><strong>Alternative considered and rejected:</strong> A polished completed MRD that treats all hypotheses as validated. Rejected because no interviews or paid trials exist and regional statistics cannot validate individual demand. Full accommodation commitments were also rejected at this stage.</li>
+<li><strong>Honest limits:</strong> Does not establish Jose&#39;s income, route, sleep loss, family acceptance or willingness to pay. The market sizing example is arithmetic rather than a verified TAM. The official class skill and lab slides were not available; proposed categories and thresholds are not claimed to reproduce their wording.</li>
+<li><strong>Revisions:</strong><ul>
+<li>October 15 2026: Incorporated the student&#39;s affordability objection and work schedule; added sourced contextual evidence, counterevidence and an explicit worked example.</li>
+<li>October 22 2026: Module 4 revises the current persona to I1, incorporates supplied summaries and creates English MRD/visual outputs. The Module 3 snapshot is retained.</li>
+</ul>
+</li>
+</ul>
+<h3>Tool 3.2</h3>
+<ul>
+<li><strong>Name:</strong> ResisXV discovery interview preparation workflow</li>
+<li><strong>Job:</strong> Convert uncertain customer and buyer assumptions into neutral, traceable research questions and a consistent notes structure.</li>
+<li><strong>Architecture choice:</strong> Reusable guide drafted through a structured chat workflow, with separate worker and employer audiences. No persistent interview agent or installed discovery-interviews skill was used.</li>
+<li><strong>Input:</strong> Five H IDs, worker persona, possible employer buyer, JTBD framing and the requirement to explore past behavior before introducing a concept.</li>
+<li><strong>Output:</strong> Two 20-minute guides with introduction, exploration, validation and conclusion; recruitment and consent fields; question-to-hypothesis links; top three worker questions; and an interview notes schema.</li>
+<li><strong>Human checkpoint:</strong> Recruit appropriate participants, disclose relationships, obtain consent, ask neutral probes, record accounts faithfully and distinguish direct quotation from paraphrase. Review whether income questions are necessary and comfortable for the participant.</li>
+<li><strong>Success criteria:</strong> Questions explore actual decisions and alternatives before concept reaction. Demonstrated audience adaptation: worker inputs produced questions about the last commute, recovery and household tradeoffs; employer inputs produced questions about staffing evidence, purchasing authority and approval routes. Neither guide uses positive concept reaction as payment validation. Actual research quality remains untested because neither guide has been fielded.</li>
+<li><strong>Alternative considered and rejected:</strong> One identical guide for workers and employers. Rejected because the user of accommodation and the possible purchaser have different jobs and constraints. Invented or AI role-played interviews were rejected as a substitute for research evidence.</li>
+<li><strong>Honest limits:</strong> A prepared guide is not an interview. There are no respondent quotations, recruitment records, findings, invalidated hypotheses or interview-based opportunity scores to report. Two future interviews would provide early qualitative reads, not market prevalence.</li>
+<li><strong>Revisions:</strong><ul>
+<li>October 15 2026: Added route, working-day, household-budget and actual-quote probes after the student&#39;s highlighted comments.</li>
+<li>October 22 2026: Four source summaries are now available in Module 4. The worker guide and proposed employer follow-up are distinguished; exact dates and relationships remain open.</li>
+</ul>
+</li>
+</ul>
+<h3>Tool 3.3</h3>
+<ul>
+<li><strong>Name:</strong> Premise and evidence challenge pass</li>
+<li><strong>Job:</strong> Identify claims that exceed the evidence and replace them with sourced findings, explicit assumptions or testable questions.</li>
+<li><strong>Architecture choice:</strong> A human-reviewed challenge workflow using highlighted comments, web research and transparent calculations. Chosen because factual support, affordability arithmetic and customer validation require different checks.</li>
+<li><strong>Input:</strong> The student&#39;s claims about hotel affordability, an 8:30 a.m. to 5:30 p.m. schedule and approximately 48 weekly hours, bus and Metro travel, potential time savings, safety concerns and family acceptance.</li>
+<li><strong>Output:</strong> Revised framing and evidence scoreboard; a validation checklist; and a modeled stay-cost and time comparison. Sources include INEGI EOD 2017, INEGI ENVIPE 2025, CONASAMI&#39;s 2026 wage resolution and official hotel pages.</li>
+<li><strong>Human checkpoint:</strong> Confirm source freshness and scope. Obtain current lodging quotes and individual budgets; do not attribute minimum-wage income to Jose. Verify actual workdays and breaks before deriving weekly hours.</li>
+<li><strong>Success criteria:</strong> A claim fails if it treats inference as observation or ignores material counterevidence. Demonstrated contrast A: &quot;there is no hotel alternative&quot; failed because official local hotel pages show supply, so the output became an affordability hypothesis. Contrast B: &quot;accommodation exists but may not fit disposable income&quot; was retained as testable; the output requested dated quotes, household budgets and paid choices rather than rejecting supply. Calculation check: two 90-minute long journeys replaced by two 20-minute local journeys yield 140 minutes recovered, not an automatic three hours of extra sleep.</li>
+<li><strong>Alternative considered and rejected:</strong> Treating a plausible Mexican-worker example as completed interviews or applying a general assumption about Mexican family behavior. Rejected because a model cannot establish observed customer experience, and household obligations differ.</li>
+<li><strong>Honest limits:</strong> Hotel Panorama&#39;s advertised MXN 250 rate is undated and not a confirmed current quote. ENVIPE&#39;s 85.2% figure is perceived public-transport insecurity among adults in the State of Mexico, not a route-level crime probability. Official wages are contextual benchmarks; scenario costs and household choices remain assumptions.</li>
+<li><strong>Revisions:</strong><ul>
+<li>October 15 2026: Incorporated supporting and conflicting evidence and replaced all highlighted drafting prompts with final text.</li>
+<li>October 22 2026: Later research applies student budget corrections. Current company-wide funding and paid feasibility remain unverified; prior contextual sources are not refreshed by this record.</li>
+</ul>
+</li>
+</ul>
+<h3>Research outputs and current decisions</h3>
+<p><strong>Vision:</strong> Workers with long commutes should be able to protect recovery and reliable arrival without destabilizing their household. ResisXV explores occasional accommodation near work while preserving the worker&#39;s main home.</p>
+<p><strong>Primary persona:</strong> Jose Martinez, 45, production floor supervisor at PEFSA, living in Chimalhuacan with his wife and two children. The student reports an 8:30 a.m. to 5:30 p.m. schedule, approximately 48 hours per week, local surface transport plus Metro, and a three-to-four-hour daily commute. These remain project inputs rather than interview findings; exact workdays, breaks, income and routes require confirmation.</p>
+<p><strong>Core unmet-need themes:</strong> recovery and reliable arrival; affordable overnight alternatives while household expenses continue; and compatibility with family responsibilities. Safety and cleanliness are decision criteria to investigate, not established advantages of ResisXV.</p>
+<p><strong>Five hypotheses and status:</strong></p>
+<ol>
+<li>H1: Long travel reduces recovery between workdays. Future test: at least three of five diary participants lose an hour of intended rest on two workdays. Untested, primary n = 0.</li>
+<li>H2: Existing overnight options can exceed available household budget. Future test: at least three of five workers identify a real need but reject a dated quote for a documented budget reason. Untested, primary n = 0.</li>
+<li>H3: Household obligations can block occasional overnight adoption. Future test: at least three of five workers identify a specific use occasion with a workable household arrangement. Untested, primary n = 0.</li>
+<li>H4: Added accommodation spending constrains self-pay demand. Future test: at least three of ten eligible workers voluntarily reserve a stay at a viable disclosed price. Untested, primary n = 0.</li>
+<li>H5: Employer support depends on documented needs, budget and approval authority. Future test: one authorized employer agrees to a scoped pilot, with suitable supply assessed separately. Untested, primary n = 0.</li>
+</ol>
+<p><strong>Evidence:</strong> Historical EOD data supports investigating long work journeys; ENVIPE adds regional perception evidence; official wage and hotel information motivate an affordability comparison. None establishes product demand. Complete source links and limitations appear in the supporting packet.</p>
+<p><strong>Additional research:</strong> First conduct two worker interviews, then a separate employer interview. Follow with a five-worker travel and rest diary, at least three dated lodging quotes, budget comparisons and, only if feasible, a limited voluntary paid pilot. This is a proposed sequence, not completed or scheduled fieldwork.</p>
+<p><strong>Top three interview questions:</strong></p>
+<ol>
+<li>Walk me through your most recent workday, from leaving home to returning.</li>
+<li>Tell me about the last time your commute affected your rest, work plans or responsibilities at home. What happened?</li>
+<li>What have you tried to improve that situation, and how did you decide whether it was worth the time and expense?</li>
+</ol>
+<p><strong>Recommendation:</strong> Conditional Go for discovery and cost feasibility; No Go for accommodation commitments until affordability, worker demand, household fit, suitable supply and any employer approval are established. Proposed review date: October 29 2026, subject to arranging research; this is not a scheduled reminder or a promise that research will be complete.</p>
+<h3>Student contribution and response to AI</h3>
+<p>The student&#39;s initial objection was that hotels were not economically realistic for the target worker. The student also supplied schedule and transport details and identified family acceptance as a concern. The revision treats affordability as a central constraint, uses current official wage context and checks actual accommodation supply; it replaces the unsupported absolute claim with a testable comparison. No additional student opinion or first-pass reasoning has been invented.</p>
+<h3>Proposed harness revisions</h3>
+<p><strong>MRD instructions:</strong> Define the role, objective and inputs; identify the top job before proposing scope; separate findings from assumptions; require evidence for and against every hypothesis; report n and verdicts; compare alternatives on customer hiring criteria; and use explicit development gates. With no primary research, retain untested verdicts and label all scenarios.</p>
+<p><strong>Discovery instructions:</strong> Separate worker and buyer guides; number questions to hypotheses; use neutral, open questions about past behavior; introduce the product only after exploration; disclose recruitment; and record limitations. Do not generate participant identities, quotations, completed notes or validation results.</p>
+<p><strong>Iteration checks:</strong> Re-run the challenge on an absolute claim and a qualified claim and confirm materially different outputs. Check time and cost arithmetic, source dates, research denominators and hypothesis links. These are documented proposed revisions, not proof that the class skills were uploaded or modified in Claude.</p>
+<h3>Files and handoff</h3>
+<ul>
+<li>ResisXV_Module3_Corregido.docx: supporting research and MRD packet.</li>
+<li>DESIGN_DOC_ResisXV_Module3.md: updated running record; replace the old project-context design document with this file.</li>
+<li>ResisXV_Module3_Submission.pdf: updated design record followed by the supporting packet for review and Canvas submission.</li>
+<li>Remaining gaps: real interviews and synthesis; confirmed class-skill installation and invocation; verified personal budget and route; actual paid demand.</li>
+</ul>
+<hr>
+</div></details>
+<details id="record-module-4" class="record-section" ><summary><span>Module 4: User Stories</span><span class="expand" aria-hidden="true">+</span></summary><div class="record-copy"><h2>Module 4: User Stories</h2>
+<p><strong>Status:</strong> recorded; deliverables drafted and exported, research and operational limits disclosed
+<strong>Session date:</strong> October 22 2026, America/Matamoros
+<strong>Summary:</strong> Converted supplied interview summaries into an updated persona-led MRD, twenty primary stories plus three internal proposals, an affinity map, an eleven-type content model and eleven static wireframes. The student supplied the moodboard, corrected the individual versus company-wide funding scope and the I4 nightly budget, and requested all submission documents in English. This session documents completed drafting and reusable workflows; it does not claim funded accommodation, completed stays, usability findings or an externally submitted assignment.</p>
+<p><strong>Recording scope:</strong> This entry was prepared in ChatGPT Work from the ongoing project. The original course template&#39;s references to Claude are retained as template instructions, not a claim that the work ran in Claude. The earlier Module 3 entry was restored verbatim from DESIGN_DOC_ResisXV_Module3.md and remains a dated snapshot; its current-state assumptions are superseded below.</p>
+<h3>Evidence and decisions carried forward</h3>
+<ul>
+<li>Primary persona: Sebastian I1, an operational worker living in Chimalhuacan and working around Barranca del Muerto. The earlier Jose/PEFSA persona remains in the Module 3 historical entry only.</li>
+<li>Research basis: four supplied source records, I1/I3/I4 worker accounts and I2 employer stakeholder. I4 is labelled Jocelyn / Manolo and unique identity/count remains unresolved. Counts are source records, not market prevalence. Notes consent is reported; exact dates and precise recruitment relationships still need completion.</li>
+<li>I2 correction: MXN 3,000-4,000 weekly for the entire company. Approximately MXN 12,000 monthly is a working estimate requiring reconciliation, not an additional funded commitment. I2 is not established as I1&#39;s employer.</li>
+<li>I4 correction: MXN 100 per night is the stated limit, not MXN 500, a payment or a viable service price. The unreconfirmed monthly amount is excluded.</li>
+<li>Student-originated concern: decide who can receive scarce support and consider the effects on workers who cannot self-pay and receive no allocation. Eligibility, priority and review rules remain open.</li>
+<li>Canonical English journey: Plan, Recognize, Check, Review, Request, Reflect. It has context before a trigger and labelled hypothetical later-use stages. The gate passed for structure only.</li>
+<li>Recommendation: Conditional Go for prototype testing and supply/cost feasibility; No Go for paid stays or capacity commitments until funding, supply, voluntary choice and operating gates are resolved. October 29 2026 is a proposed review date, not completed work or a scheduled commitment.</li>
+</ul>
+<h3>Tool 4.1</h3>
+<ul>
+<li><strong>Name:</strong> Interview observation coding and affinity synthesis</li>
+<li><strong>Job:</strong> Turn supplied interview summaries into source-linked observations and a small set of research themes.</li>
+<li><strong>Architecture choice:</strong> Human-reviewed workflow using the PM101 affinity-map skill. Source IDs remain stable so later stories can be traced to evidence. It uses the supplied notes rather than an autonomous interviewer.</li>
+<li><strong>Input:</strong> Interview.html, four supplied source records I1-I4, student corrections to I2 and I4 budgets, and O01-O40 in the evidence ledger.</li>
+<li><strong>Output:</strong> Forty paraphrased observations, eight proposed clusters, five themes T1-T5, an orphan observation O40, Affinity_Map_ResisXV.pdf and Affinity_Themes_ResisXV.md.</li>
+<li><strong>Human checkpoint:</strong> Confirm observation meaning, clustering, interview dates and recruitment relationships. Clarify whether I4 is one person. Do not count an employer report about workers as additional worker interviews.</li>
+<li><strong>Success criteria:</strong> Every observation retains its source; counts refer to records; contradictory accounts remain visible. Demonstrated contrast: I1 cannot self-pay, I3 excludes recurring accommodation and I4 has a corrected MXN 100 nightly limit. The synthesis distinguishes these accounts instead of reporting one shared willingness-to-pay figure.</li>
+<li><strong>Alternative considered and rejected:</strong> Rationale recorded now: a single positive summary of all interviews was not used because it would hide household and payment differences. Forcing every observation into a theme was not used; O40 remains an open family-emergency question.</li>
+<li><strong>Honest limits:</strong> Summaries are not transcripts and observation counts are not prevalence. I4 identity/count and timing remain uncertain. No paid stay, rest outcome or causal attendance effect was established. Affinity columns retain earlier provisional stage labels; a full regeneration against the canonical English journey is still pending.</li>
+<li><strong>Revisions:</strong><ul>
+<li>October 22 2026: Applied the student correction that MXN 3,000-4,000 weekly is company-wide and that I4 states MXN 100 per night; removed reliance on the unreconfirmed monthly I4 amount.</li>
+</ul>
+</li>
+</ul>
+<h3>Tool 4.2</h3>
+<ul>
+<li><strong>Name:</strong> Evidence-led persona and visual MRD workflow</li>
+<li><strong>Job:</strong> Revise the research persona and turn the MRD into a journey, evidence, data, metric and decision handoff.</li>
+<li><strong>Architecture choice:</strong> PM101 MRD visualizer plus document-generation workflow, with an explicit journey gate and human review. A structured workflow was used because research evidence and proposed design must remain distinguishable.</li>
+<li><strong>Input:</strong> Prior Module 3 MRD; I1-I4 summaries; five hypotheses; affinity themes; the reviewed six-stage journey; the course Apple accident teaching case; and the Canvas rubric.</li>
+<li><strong>Output:</strong> ResisXV_Module4_MRD_and_Personas.docx; thirteen-slide ResisXV_Visual_MRD.pdf and MRD_Visual_ResisXV.html; Journey_ResisXV.md; Open_Hypotheses_ResisXV.md; Journey_Template_ResisXV.md; and Privacy_5C_Checklist_ResisXV.md.</li>
+<li><strong>Human checkpoint:</strong> Review the move from the assumed Jose/PEFSA profile to Sebastian I1 around Barranca del Muerto. Check all n values and the company-wide funding scope. Treat the six-stage structural gate as a design check, not validation of real behavior after requesting.</li>
+<li><strong>Success criteria:</strong> The journey begins before app use, names a trigger and ends in reflection. Each stage has a job, a source/n or a labelled hypothesis, and data. Demonstrated contrast: I1 home-life understanding and I3 nightly household duties produce different persona implications. Recommendation stays Conditional Go for prototype/feasibility and No Go for paid stays while operating gates remain unresolved.</li>
+<li><strong>Alternative considered and rejected:</strong> The earlier Jose-primary, n = 0 draft was not retained as the current research persona once the user selected I1 and supplied summaries. A confident Go based on interest alone was not used. Opportunity ranks were kept qualitative because importance/satisfaction scores were not collected.</li>
+<li><strong>Honest limits:</strong> One source record per profile is not saturation; I4 identity is unresolved. No defensible market-wide TAM, approved subsidy, supplier quote, paid demand or measured sleep improvement exists. The 50/30/20 diagnostic review weights and 50/80 bands are guesses and must never allocate worker support. Proposed dates are research-review targets, not completed research.</li>
+<li><strong>Revisions:</strong><ul>
+<li>October 22 2026: Superseded current n = 0 claims with four source records, keeping the earlier Module 3 snapshot as history.</li>
+<li>October 22 2026: Produced an English document set and labelled scores, conditions, provider data and future outcomes as proposals.</li>
+</ul>
+</li>
+</ul>
+<h3>Tool 4.3</h3>
+<ul>
+<li><strong>Name:</strong> Persona-specific user story board and happy path</li>
+<li><strong>Job:</strong> Convert the worker job and research constraints into design stories, traceability and a limited prototype scope.</li>
+<li><strong>Architecture choice:</strong> PM101 user-story-board skill followed by human review and HTML/XLSX generation. The spreadsheet supports filtering and later edits; the happy-path Markdown is a reusable wireframe input.</li>
+<li><strong>Input:</strong> Sebastian I1; the six journey stages; T1-T5; H1-H5; three proposed epics; and the twenty stories reviewed in chat.</li>
+<li><strong>Output:</strong> Twenty primary stories S01-S20 and three separate internal proposals A01-A03 in User_Story_Board_ResisXV.xlsx, .html and .md; Happy_Path_ResisXV.md. Ten prototype P0 stories are proposed, including S12/S15/S16 exceptions.</li>
+<li><strong>Human checkpoint:</strong> Check that every story has role, situation, motivation and a distinct outcome. Review the proposed MVP and any later scope expansion separately from accepting the story wording. Do not treat all interface emotions as interview observations.</li>
+<li><strong>Success criteria:</strong> At least twenty primary stories, at least two per stage, at least three unhappy-path stories and three internal stories outside the primary count. The recorded structural check finds 20 primary, 3 internal and all prototype P0 IDs on screen cards. The user accepted the twenty as a draft; this does not validate their adoption assumptions.</li>
+<li><strong>Alternative considered and rejected:</strong> Rationale recorded now: a feature checklist or twenty identical happy-path requests would not express situations, worker outcomes or escape paths. An all-P0 board was not used; v1 and Later retain lower-priority work.</li>
+<li><strong>Honest limits:</strong> The happy path and ten-story MVP are design proposals. P0 means prototype priority; linked hypotheses are not all validated. Internal roles were proposed without separate interviews. W02/W06/W08 add explanation, timing and closing-cost detail beyond the original MVP tags; these changes are disclosed rather than silently treated as approved scope.</li>
+<li><strong>Revisions:</strong><ul>
+<li>October 22 2026: Organized the accepted stories into a board and exported the seven-step happy path plus three critical exceptions.</li>
+<li>October 22 2026: Converted the submission edition, including headers and metadata, to English at the user request.</li>
+</ul>
+</li>
+</ul>
+<h3>Tool 4.4</h3>
+<ul>
+<li><strong>Name:</strong> Story-to-content model and coverage workflow</li>
+<li><strong>Job:</strong> Identify the information each story requires and define its source, ownership, lifecycle, relationships and calculations.</li>
+<li><strong>Architecture choice:</strong> PM101 content-model skill with a structured dictionary, relationship diagram and story coverage check. A content model was used before treating screen labels as real available data.</li>
+<li><strong>Input:</strong> The story board, journey, affinity themes, funding correction and later screen cards. No live provider integration or operational database was supplied.</li>
+<li><strong>Output:</strong> Content_Model_ResisXV.html and .md; eleven proposed content types; typed fields and sources; relationships/cardinalities; budget, copay, inventory and outcome formulas; and a reusable content-type template section.</li>
+<li><strong>Human checkpoint:</strong> Confirm every field and who can change it. Resolve administrative capture of required fields, budget-period rules, inventory expiry and consent/retention before implementation. Confirm each visible field against a screen card.</li>
+<li><strong>Success criteria:</strong> All 23 story rows have a structural read/write mapping and all eleven types have an ID, creation timestamp and status. The budget formula counts each allocation once in its current state, and copay is total minus support. Missing data yields no outcome score; it is not silently converted to zero.</li>
+<li><strong>Alternative considered and rejected:</strong> Rationale recorded now: buttons and screens were not modelled as data entities. A single employee-budget field was not used because the correction establishes a shared company fund. A large future-service model was not used; the draft stays below twelve types.</li>
+<li><strong>Honest limits:</strong> Structural coverage is not a working system. The model does not establish price viability, physical capacity, safety or funding. All internal required-field capture has not passed a full screen/operations review. The weighted diagnostic score is read-only and provisional, not a funding rank.</li>
+<li><strong>Revisions:</strong><ul>
+<li>October 22 2026: Separated support program, allocation, request and stay records so company funds are not confused with personal entitlement.</li>
+<li>October 22 2026: English edition carries formulas forward and includes the provisional diagnostic score with explicit limits.</li>
+</ul>
+</li>
+</ul>
+<h3>Tool 4.5</h3>
+<ul>
+<li><strong>Name:</strong> Low-fidelity wireframe and usability planning workflow</li>
+<li><strong>Job:</strong> Show the chronological task, information, next action and explicit exit for the prototype worker journey.</li>
+<li><strong>Architecture choice:</strong> PM101 wireframe/screen-flow skill using grayscale vector drawings, annotated cards and PDF/HTML export. Static files were chosen; no Balsamiq, Figma, Jira or Trello connection is claimed.</li>
+<li><strong>Input:</strong> Happy_Path_ResisXV.md; story IDs; content fields; primary-persona constraints; and successive chat reviews of screen groups.</li>
+<li><strong>Output:</strong> Eleven screens W01-W11 in ResisXV_Wireframes_English.pdf and Wireframes_ResisXV.html; Screen_Flow_ResisXV.md; Information_Architecture_ResisXV.mmd; Screen_Card_Template_ResisXV.md; and Usability_Test_Plan_ResisXV.md.</li>
+<li><strong>Human checkpoint:</strong> Review groups of screens for understandable cost, pending versus approved state, and exits. W01-W06 received chat acceptance; later screens were delivered and work continued, without separate accept/edit/reject responses for every detail. Test with actual profile-matched workers before relying on comprehension.</li>
+<li><strong>Success criteria:</strong> All ten prototype P0 stories appear on screen cards. Every screen names the task, next action, back-out, content and inferred emotion. Denial does not silently create self-payment; leaving does not cancel a submitted request; cancellation requires confirmation. A test plan specifies five prospective workers, neutral tasks, completion, seconds, errors, help and satisfaction.</li>
+<li><strong>Alternative considered and rejected:</strong> The work used low-fidelity files rather than a polished branded interface or a live booking implementation. Login was not made the first job; the initial screen starts with the night and cost limit. Automatic support approval and automatic self-pay after denial were not used.</li>
+<li><strong>Honest limits:</strong> The screens do not execute booking, payment, support decisions or access. MXN 180, zero copay, sample addresses, conditions, eligibility and times are fictional. Five usability participants have not been recruited and tests have not been run. No completed stay, measured usability rate or real approval is claimed.</li>
+<li><strong>Revisions:</strong><ul>
+<li>October 22 2026: Added explicit no-availability, rejection/review and cancellation states; combined the eleven drawings into one file.</li>
+<li>October 22 2026: Recreated the eleven screens and cards in English after the user language instruction.</li>
+</ul>
+</li>
+</ul>
+<h3>Tool 4.6</h3>
+<ul>
+<li><strong>Name:</strong> Student moodboard review and reusable visual brief</li>
+<li><strong>Job:</strong> Translate the student-supplied collage into a proposed emotional and visual direction for later interface styling.</li>
+<li><strong>Architecture choice:</strong> PM101 mood-board skill used as a review and brief-writing workflow. The student supplied the images; no generated replacement imagery or new branded assets were needed.</li>
+<li><strong>Input:</strong> Mood Board.pdf, I1 constraints, the affinity themes, Norman visual/behavioral/reflective levels and existing low-fidelity screens.</li>
+<li><strong>Output:</strong> The original moodboard preserved unchanged; Visual_Design_Brief_ResisXV.md; and Visual_Review_Checklist_ResisXV.md. Proposed desired words are calm, trustworthy and dignified.</li>
+<li><strong>Human checkpoint:</strong> The student should confirm the proposed stance/adjectives and decide whether to add type, per-image captions or a contemporary worker reference. Do not attribute those proposed refinements as decisions already made by the student.</li>
+<li><strong>Success criteria:</strong> The review connects material/light references with rest and trust and keeps cost/state clarity at the behavioral level. It identifies the missing type specimen and captions rather than treating a collage as a complete interface specification. The existing historical-worker images are context cues, not research evidence.</li>
+<li><strong>Alternative considered and rejected:</strong> Rationale recorded now: replacing the student board with generic AI imagery was not used. Luxury styling or competitor screen copying was not adopted as the product direction, because affordability and worker dignity are central constraints.</li>
+<li><strong>Honest limits:</strong> The proposed stance and captions have not been fully endorsed, and suggested image/type refinements were not performed. The board does not prove room cleanliness or safety. The brief is not a final brand system or a tested interface.</li>
+<li><strong>Revisions:</strong><ul>
+<li>October 22 2026: User supplied the existing board; inventory changed from missing to received with minor refinements proposed.</li>
+<li>October 22 2026: Added an English visual brief and checklist while preserving the source PDF.</li>
+</ul>
+</li>
+</ul>
+<h3>Tool 4.7</h3>
+<ul>
+<li><strong>Name:</strong> English handoff packaging and bounded consistency checker</li>
+<li><strong>Job:</strong> Keep the document set understandable and catch basic ID, count and funding-scope errors before handoff.</li>
+<li><strong>Architecture choice:</strong> PM101 packaging review plus a small reusable Python checker operating on structured story data and screen-card IDs. It is a bounded file workflow, not an autonomous grader or an installed new skill.</li>
+<li><strong>Input:</strong> English MRD/personas, story JSON/XLSX, content model, screen cards, affinity map, moodboard and explicit company-wide funding scope.</li>
+<li><strong>Output:</strong> ResisXV_Module4_English_Documents.zip; README_English_Set.md; Submission_Consistency_Check_ResisXV.py; and Submission_Consistency_ResisXV.json. This recording adds the completed Module 4 design document and PDF to the package.</li>
+<li><strong>Human checkpoint:</strong> Review source facts and open consistency issues. A passing structured check cannot certify research or Canvas readiness. The student must upload the PDF and replace the design-document copy in project context.</li>
+<li><strong>Success criteria:</strong> Eight bounded baseline checks passed on current inputs. A controlled negative input removed S13 from screen coverage and changed the structured funding scope to per-worker; the checker failed both rules and reported missing S13. Original submission files were not corrupted. This demonstrates input sensitivity, not validation of the venture.</li>
+<li><strong>Alternative considered and rejected:</strong> A presence-only inventory was not considered sufficient: it cannot detect a missing P0 story or a wrong scope assertion. A full automatic score or unconditional ready-to-submit badge was not used because research metadata, legacy stage labels and operational field capture remain unresolved.</li>
+<li><strong>Honest limits:</strong> The checker does not validate note authenticity, all narrative budget statements, every required field, visuals, live prices, safety, usability or a rubric grade. The legacy affinity-map columns are not fully aligned with the canonical English journey. The prior coaching scores use different denominators and are not summed into a claimed Canvas grade.</li>
+<li><strong>Revisions:</strong><ul>
+<li>October 22 2026: Built English submission editions after earlier Spanish drafts; the source interview records remain unchanged.</li>
+<li>October 22 2026: Ran an actual passing baseline and a deliberate failing control while recording Module 4.</li>
+</ul>
+</li>
+</ul>
+<h3>Deliverables for the assignment</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>File or record</th>
+<th>Current status</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1 Visual MRD</td>
+<td>ResisXV_Visual_MRD.pdf; MRD_Visual_ResisXV.html; ResisXV_Module4_MRD_and_Personas.docx</td>
+<td>Drafted in English; persona evidence and open hypotheses disclosed.</td>
+</tr>
+<tr>
+<td>2 User Story Board</td>
+<td>User_Story_Board_ResisXV.xlsx; .html; .md</td>
+<td>20 primary stories and 3 internal proposals; prototype scope remains proposed.</td>
+</tr>
+<tr>
+<td>3 Moodboard</td>
+<td>Student Mood Board.pdf; Visual_Design_Brief_ResisXV.md</td>
+<td>Original received and reviewed; type/caption refinements remain proposed.</td>
+</tr>
+<tr>
+<td>3 Affinity map</td>
+<td>Affinity_Map_ResisXV.pdf; Affinity_Themes_ResisXV.md</td>
+<td>40 observations, 5 themes and one orphan; legacy column labels need alignment.</td>
+</tr>
+<tr>
+<td>3 Content model</td>
+<td>Content_Model_ResisXV.html; .md</td>
+<td>11 content types with sources, owners, relationships and formulas; full internal capture review pending.</td>
+</tr>
+<tr>
+<td>4 Wireframes</td>
+<td>ResisXV_Wireframes_English.pdf; Wireframes_ResisXV.html; Screen_Flow_ResisXV.md</td>
+<td>11 static screens, including no availability, denial and cancellation; usability not tested.</td>
+</tr>
+<tr>
+<td>5 Design document</td>
+<td>DESIGN_DOC_ResisXV_Module4.md; ResisXV_Module4_Design_Document.pdf</td>
+<td>Recorded from this session; PDF exported for the student to upload to Canvas.</td>
+</tr>
+</tbody></table>
+<h3>Bounded consistency review</h3>
+<p>The machine-check report has a passing eight-rule baseline and a deliberate failing control. The following broader review remains separate; it is not made true by the baseline result.</p>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Result</th>
+<th>Evidence or open issue</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Primary research persona</td>
+<td>Consistent by I1 reference; labels not word-for-word identical</td>
+<td>MRD, story board and brief use Sebastian; screen cards cite I1 but do not always repeat the name.</td>
+</tr>
+<tr>
+<td>Journey columns identical in every artifact</td>
+<td>Open</td>
+<td>Later English artifacts use the canonical six-stage set; the affinity map retains earlier provisional labels. Journey_ResisXV.md records the crosswalk, but the map was not fully regenerated.</td>
+</tr>
+<tr>
+<td>Every prototype P0 on a screen and every cited story exists</td>
+<td>Pass for structured IDs</td>
+<td>Submission_Consistency_ResisXV.json baseline; negative control catches missing S13.</td>
+</tr>
+<tr>
+<td>Screen types exist and required fields all have capture surfaces</td>
+<td>Partial</td>
+<td>The screen cards map displayed types/fields. Administrative required-field capture and authorization are not fully checked.</td>
+</tr>
+<tr>
+<td>Affinity theme coverage</td>
+<td>Present in the board</td>
+<td>T1-T5 are cited. This checks linkage, not the validity or approval of the clustering.</td>
+</tr>
+<tr>
+<td>Outcome computable from defined fields</td>
+<td>Structurally mapped</td>
+<td>Feedback rest/experience, stay actual copay and request accepted cap are defined. No completed-stay data exists; missing inputs mean no result.</td>
+</tr>
+<tr>
+<td>Mood direction and trigger emotions</td>
+<td>Proposed, not user-tested</td>
+<td>Calm/trustworthy/dignified are intended responses to fatigue and uncertainty, not claimed participant feelings on app use.</td>
+</tr>
+<tr>
+<td>MVP sentence and screen strip</td>
+<td>Partially expanded with changes disclosed</td>
+<td>The seven story steps are implemented through additional pending, condition and exception states. Some v1/Later details were pulled into the screen drafts; the board scope was not silently overwritten.</td>
+</tr>
+</tbody></table>
+<h3>Actual iteration and student contribution</h3>
+<p>The student selected I1 as primary, challenged the I4 MXN 500 figure, corrected I2 funding to a company-wide pool, raised excluded-worker consequences, supplied the moodboard and required English documents. Early screen groups were reviewed in chat; later material was delivered for review. Alternative rationales labelled as recorded now are this recording&#39;s design explanation, not invented claims about a past student debate.</p>
+<p>The central change is that travel burden, household fit and ability to pay are treated separately. Angélica&#39;s emergency-only situation contrasts with Sebastian&#39;s suggested weekday use; the prototype cannot assume that a shared company fund covers everyone. The user contribution is documented without claiming the student independently originated every AI-generated metric, field or screen.</p>
+<h3>Remaining limits and next handoff</h3>
+<ul>
+<li>Complete exact interview dates, prior relationships and I4 identity/count before treating the research metadata as complete. Do not fabricate missing values.</li>
+<li>Reconcile the company-wide weekly versus monthly funding estimate and obtain an authorized sponsor, rules and viable provider quotes before a paid pilot.</li>
+<li>Align affinity columns and confirm operational field capture before claiming full cross-artifact consistency.</li>
+<li>Test the prototype with five voluntarily recruited profile-matched workers; no usability results exist yet. Do not treat the static illustrations or fictitious MXN 180 price as transactions.</li>
+<li>Any source coaching scores are provisional and use different scales. No new aggregate score out of 100 or final Canvas grade is asserted here.</li>
+<li>Student handoff: upload ResisXV_Module4_Design_Document.pdf to Canvas and replace the old design-document copy in project context with DESIGN_DOC_ResisXV_Module4.md. This session does not claim those external uploads were performed.</li>
+</ul>
+<h3>Reusable tools saved</h3>
+<p>Journey_Template_ResisXV.md, Privacy_5C_Checklist_ResisXV.md, Happy_Path_ResisXV.md, Screen_Card_Template_ResisXV.md, Usability_Test_Plan_ResisXV.md, Visual_Review_Checklist_ResisXV.md and Submission_Consistency_Check_ResisXV.py are included in the English handoff package. The checker has a recorded positive and negative input demonstration. These are files/workflows; no new installed skill or live third-party connection is claimed.</p>
+<hr>
+</div></details>
+<details id="record-module-5" class="record-section" ><summary><span>Module 5: Customer Journey</span><span class="expand" aria-hidden="true">+</span></summary><div class="record-copy"><h2>Module 5: Customer Journey</h2>
+<p><strong>Status:</strong> recorded; Module 5 artifacts prepared for student review and submission; research and live-use gates remain open
+<strong>Session date:</strong> October 29 2026, America/Matamoros
+<strong>Summary:</strong> Updated ResisXV from the Module 4 drafts into a complete story board, MVC one-pager, twelve-week delivery plan, actor-based customer workflow, final MRD and key wireframes. The student supplied the course skills and class examples, requested accurate matching of their structures, and directed motel/hostel comparison and English deliverables. Seven workflows are recorded below; this is a record of completed drafting and checks, not a claim that the product, research studies or funded accommodation operated.</p>
+<h3>Current evidence and decisions</h3>
+<ul>
+<li>Primary design persona remains Sebastián I1. The four supplied records comprise three worker records and one employer record, with I4 identity/count unresolved. Exact dates and prior recruitment relationships still need completion. No new interviews or quotes were generated as evidence.</li>
+<li>I2’s MXN 3,000-4,000 weekly range is for the whole company. It is not approved funding or a per-worker entitlement. The rough monthly estimate still needs a consistent period. I2 is not established as I1’s employer.</li>
+<li>The corrected MXN 100 nightly stated budget belongs to I4, not I1. Stated budgets do not establish a viable price or a payment.</li>
+<li>Canonical stages remain Plan, Recognize, Check, Review, Request, Reflect. Arrival and stay remain within Reflect. The proposed seven-stage split was not accepted and is not silently imposed.</li>
+<li>The student requested motel/hostel alternatives and supplied BOOST MVC and release-grid examples. Mobile web, managed hosting, occasional-one-night scope and numeric research thresholds are still proposals; authorization to draft is not evidence that every proposal was independently chosen or validated by the student.</li>
+<li>Conditional Go for research, supplier feasibility and controlled prototypes. No Go for paid operation while funding, supply, worker consent, responsible support and cost feasibility remain unresolved. The MRD proposes November 5 2026 as a review target; no appointment or reminder was created.</li>
+</ul>
+<h3>Tool 5.1</h3>
+<ul>
+<li><strong>Name:</strong> User Story Board refinement</li>
+<li><strong>Job:</strong> Connect worker, purchaser and internal needs to proposed releases.</li>
+<li><strong>Architecture choice:</strong> Source-linked story register and spreadsheet/HTML exports; human review remains necessary.</li>
+<li><strong>Input:</strong> Twenty worker and three internal Module 4 stories, purchaser additions P01-P05, the six-stage journey and the Module 5 release plan.</li>
+<li><strong>Output:</strong> User_Story_Board_ResisXV_Module5.xlsx, .html, .md and .json; 28 stories with situation, motivation, outcome, emotion, behavior, evidence, hypothesis, epic, scope and release.</li>
+<li><strong>Human checkpoint:</strong> Confirm purchaser authority, role-specific needs and proposed scope. I2 is not established as I1’s employer. Inferred emotions and unobserved purchaser behavior stay labelled.</li>
+<li><strong>Success criteria:</strong> All 28 stories passed four-part wording checks, including grammatically correct “As an”; every stage has at least two worker stories. IDs match the Scrum register and all journey references.</li>
+<li><strong>Alternative considered and rejected:</strong> Design rationale recorded in this pass: a worker-only board would omit the funding decision and spend justification. Five proposed purchaser stories were added; they are not claimed interview findings.</li>
+<li><strong>Honest limits:</strong> No paid adoption is validated. P0 is a prototype dependency, not approval to ship. A01-A03 move explicitly from v1 to proposed MVP prerequisites. The full operations interface is not specified.</li>
+<li><strong>Revisions:</strong><ul>
+<li>October 29 2026: retained IDs, integrated purchaser stories and preserved original scope/change rationale; normalized non-worker stage labels while retaining source-stage metadata.</li>
+</ul>
+</li>
+</ul>
+<h3>Tool 5.2</h3>
+<ul>
+<li><strong>Name:</strong> MVC architecture one-pager</li>
+<li><strong>Job:</strong> Translate stories and content into Model, Controller and View responsibilities.</li>
+<li><strong>Architecture choice:</strong> A grayscale three-column one-pager patterned after the supplied BOOST example; not-headless mobile web and managed hosting are proposals.</li>
+<li><strong>Input:</strong> Existing story board/happy path, eleven content types, worker and purchaser roles, BOOST MVC PDF and corrected course skills.</li>
+<li><strong>Output:</strong> ResisXV_MVC_One_Pager.pdf, MVC_ResisXV.md/.html and MVC_Story_Trace_ResisXV.md. Six Model groups, eight Controllers and seven View groups.</li>
+<li><strong>Human checkpoint:</strong> Review data ownership, employment verification, role restrictions, provider confirmation, copay acceptance and operating ownership before implementation.</li>
+<li><strong>Success criteria:</strong> PDF verified as one landscape page. Every cited story ID resolves in the existing or proposed story supplement; controller/model links are explicit.</li>
+<li><strong>Alternative considered and rejected:</strong> Native app deferred because the current occasional-stay stories establish no native-only requirement. A message-led concierge test can precede the proposed web product. These are design rationales, not a recorded student vote.</li>
+<li><strong>Honest limits:</strong> No hosting vendor, integration, maintenance owner or retention policy is confirmed. A table cannot establish working authentication, atomic holds, privacy controls or commercial feasibility.</li>
+<li><strong>Revisions:</strong><ul>
+<li>October 29 2026: adopted the student’s BOOST structural benchmark and made the company-wide fund distinct from worker copay.</li>
+</ul>
+</li>
+</ul>
+<h3>Tool 5.3</h3>
+<ul>
+<li><strong>Name:</strong> Twelve-week Scrum Board and release plan</li>
+<li><strong>Job:</strong> Sequence traceable work into weekly demonstrable outcomes and three releases.</li>
+<li><strong>Architecture choice:</strong> One structured set of 58 cards rendered as a release-by-epic grid and weekly lists, with an Excel backlog and reusable Python linter.</li>
+<li><strong>Input:</strong> MVC entries, the 28-story release register, happy path, class release-grid example and scrum-board-12-week instructions.</li>
+<li><strong>Output:</strong> Scrum_Board_ResisXV.xlsx/.html, ResisXV_12_Week_Scrum_Board.pdf, Release_Plan_ResisXV.md, story register and Scrum_Card_Linter_ResisXV.py.</li>
+<li><strong>Human checkpoint:</strong> Assign real people, capacity and a start date; review what each release proves and reduce scope if staffing cannot support the plan.</li>
+<li><strong>Success criteria:</strong> Baseline structural checks passed for 58 cards and 12 weeks. Both PDF views contain the same IDs; Excel weekly counts recalculate to 58. Deliberate bad inputs produced unknown-story, premature-release and missing-dependency errors.</li>
+<li><strong>Alternative considered and rejected:</strong> Funding and minimum operations cannot wait until the final release if a stay is to be supported. Their necessary stories are therefore explicit R1 dependencies; broader renewal/reporting remains later.</li>
+<li><strong>Honest limits:</strong> No effort or delivery capacity is validated. Relative weeks and owner roles are proposals; all cards start in Backlog. R1 at Week 6 is a controlled test, R2 at Week 9 a mid-sprint milestone, and R3 at Week 12 remains gated.</li>
+<li><strong>Revisions:</strong><ul>
+<li>October 29 2026: followed the supplied release-by-epic layout and added the required weekly view, dependencies, priorities and acceptance criteria.</li>
+</ul>
+</li>
+</ul>
+<h3>Tool 5.4</h3>
+<ul>
+<li><strong>Name:</strong> Customer Journey Workflow and walkthrough</li>
+<li><strong>Job:</strong> Describe the path from a possible night through approval, stay evaluation and purchaser renewal, including exceptions.</li>
+<li><strong>Architecture choice:</strong> A 32-step source table, self-contained HTML workflow player and swim-lane view, plus a structural consistency checker. It is a workflow, not a screen prototype.</li>
+<li><strong>Input:</strong> Canonical journey, happy path, final story IDs, MVC Controllers/Models and release plan; corrected customer-journey-workflow v2.</li>
+<li><strong>Output:</strong> Journey_Walkthrough_ResisXV.html; Journey_Workflow_ResisXV.xlsx/.md/.json; reusable checker and reports. Five actor lanes: worker, purchaser, product front stage, product back stage and operations/support.</li>
+<li><strong>Human checkpoint:</strong> Review real approval authority, provider handoffs, response timing and liability. Keep personal context steps labelled no product yet. Do not treat a hypothetical journey as observed behavior.</li>
+<li><strong>Success criteria:</strong> All six stages have at least two steps and a Controller-linked step. Structural checks passed for 32 steps, 17 decisions and seven failure steps. Negative input caught an unknown Controller and broken target. A Node VM checked script execution and routing to decision/recovery destinations.</li>
+<li><strong>Alternative considered and rejected:</strong> A straight happy-path diagram was insufficient because it would hide the purchaser and failures. The seven-stage proposal was not treated as accepted; the six existing labels were retained for cross-file consistency.</li>
+<li><strong>Honest limits:</strong> Full browser rendering and print pagination were not verified because local Chromium was unavailable. Release highlighting is not a transaction simulator. R2/R3 behavior must not be mistaken for delivered R1 functionality.</li>
+<li><strong>Revisions:</strong><ul>
+<li>October 29 2026: made funding, provider confirmation, denial, cancellation, arrival problems and renewal explicit; delivered HTML and Excel as the course skill specifies.</li>
+</ul>
+</li>
+</ul>
+<h3>Tool 5.5</h3>
+<ul>
+<li><strong>Name:</strong> Final MRD synthesis and alternatives challenge</li>
+<li><strong>Job:</strong> Combine the project evidence into a concise decision argument with an explicit next research gate.</li>
+<li><strong>Architecture choice:</strong> Evidence-led document synthesis, official provider/employment source checks, a Word render/review loop and linked story-board exports.</li>
+<li><strong>Input:</strong> Four supplied interview-summary records, O01-O40/T1-T5, prior MRD, student budget corrections, motel/hostel comparison request, final journey, MVC and release plan.</li>
+<li><strong>Output:</strong> ResisXV_Final_MRD_Module5.docx, MRD_ResisXV_Module5.md and final story files. The Word document includes the research limits, hypothesis scoreboard, scenarios, alternatives, market scenarios, risk gates and story appendix.</li>
+<li><strong>Human checkpoint:</strong> Resolve interview dates/relationships and I4 identity; verify matched provider quotes and buyer authority. Student review is still needed before submission.</li>
+<li><strong>Success criteria:</strong> Rendered and visually reviewed the Word document. The revision gives motels/hostels their strengths and a falsifiable comparison instead of claiming no alternatives. The account contrast between I1 and I3 changes household-fit segmentation.</li>
+<li><strong>Alternative considered and rejected:</strong> Unsupported absolute superiority was replaced with comparison against real provider arrangements and returning home. A large workforce is not treated as validated lodging demand or a timely market trend.</li>
+<li><strong>Honest limits:</strong> The 4.9 million employed CDMX-resident baseline is only a sourced geographic proxy; it excludes cross-border workers such as I1. Qualification, nights, price and reach are scenario assumptions. Public listings are not actual selected-date overnight quotes. There is no funded pilot, completed stay or new interview.</li>
+<li><strong>Revisions:</strong><ul>
+<li>October 29 2026: integrated the student’s motel/hostel direction consistently, added scoped TAM/SAM/SOM arithmetic and retained Conditional Go for testing but No Go for paid operation until gates pass.</li>
+</ul>
+</li>
+</ul>
+<h3>Tool 5.6</h3>
+<ul>
+<li><strong>Name:</strong> Final key wireframes and usability plan</li>
+<li><strong>Job:</strong> Make the registered core path, purchaser decisions and recovery states concrete for design review.</li>
+<li><strong>Architecture choice:</strong> Twelve grayscale SVG screens, annotated HTML/Markdown, a PDF export, screen checker and reusable review/findings template.</li>
+<li><strong>Input:</strong> Final 28-story board, MVC, canonical journey, eleven-type content model and explicit M03 accommodation-type addition, earlier eleven-screen drafts and student request to update the key design.</li>
+<li><strong>Output:</strong> ResisXV_Final_Wireframes_Module5.pdf; linked HTML; twelve editable SVGs; Screen_Flow_ResisXV_Module5.md; usability plan; reusable review template and checker.</li>
+<li><strong>Human checkpoint:</strong> Review pending versus confirmed support, demo-state navigation, affordability, cancellation terms, provider access and reconciliation. Obtain worker and purchaser feedback before coding a live service.</li>
+<li><strong>Success criteria:</strong> Twelve key screens map to known R1 stories and fields, with next/back/exit actions. Navigation targets resolve. Structural baseline passed; negative control detected an unknown story, a missing exit and a broken destination. Thirteen PDF pages were rendered and visually checked.</li>
+<li><strong>Alternative considered and rejected:</strong> A polished mockup or mixing all future features into R1 would obscure scope. Grayscale key screens keep R2/R3 details in annotations; a full operations administration console remains outside this draft.</li>
+<li><strong>Honest limits:</strong> Prices and approval/ledger states are fictional demo data. Static links do not reserve, approve, settle or test usability. F09 groups exception variants; a runtime version should show only the relevant state. No five-worker or two-approver study has occurred.</li>
+<li><strong>Revisions:</strong><ul>
+<li>October 29 2026: added employer setup, request approval and reconciliation; preserved company-wide budget arithmetic and the unaffordable-self-pay block.</li>
+</ul>
+</li>
+</ul>
+<h3>Tool 5.7</h3>
+<ul>
+<li><strong>Name:</strong> Decision logging and cumulative Module 5 handoff</li>
+<li><strong>Job:</strong> Record what was produced, why it changed and what remains untested without rewriting earlier module history.</li>
+<li><strong>Architecture choice:</strong> A running Markdown record and deterministic PDF print view assembled from the session, decision log and exported check reports.</li>
+<li><strong>Input:</strong> Recorded Modules 3 and 4, Module 5 artifacts, student requests/corrections and actual consistency-check results.</li>
+<li><strong>Output:</strong> DESIGN_DOC_ResisXV_Module5.md and ResisXV_Module5_Design_Document.pdf; current decision log and an organized submission bundle.</li>
+<li><strong>Human checkpoint:</strong> Review the concrete submission files. The student must upload to Canvas and replace the old context document. Modules 1-2 remain unrecorded; Modules 6-9 are future placeholders.</li>
+<li><strong>Success criteria:</strong> Module 3 and Module 4 sections remain byte-for-byte unchanged. Module 5 fills all nine tool fields plus dated revisions. The PDF contains the recorded entries; unknown research, approvals and tests remain identified rather than filled with invented results.</li>
+<li><strong>Alternative considered and rejected:</strong> Recreating a new isolated design record or filling future modules would lose the running history. This update preserves dated snapshots and records current-state changes in Module 5.</li>
+<li><strong>Honest limits:</strong> The record does not claim Canvas submission, a project-context replacement, permanent skill installation, Trello synchronization or a deployment. This documents drafting effort, not proof of business validation.</li>
+<li><strong>Revisions:</strong><ul>
+<li>October 29 2026: added seven Module 5 workflows, actual checks, scope decisions, unresolved research and the final student upload handoff.</li>
+</ul>
+</li>
+</ul>
+<h3>Assignment files and handoff</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Main files</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1 MVC 1 pager</td>
+<td>ResisXV_MVC_One_Pager.pdf</td>
+<td>One-page draft, story linked; architecture choices proposed.</td>
+</tr>
+<tr>
+<td>2 Final MRD and User Story Board</td>
+<td>ResisXV_Final_MRD_Module5.docx; User_Story_Board_ResisXV_Module5.xlsx</td>
+<td>Includes 20 worker, 5 purchaser and 3 internal stories; evidence limits and open gates disclosed.</td>
+</tr>
+<tr>
+<td>3 Final Design</td>
+<td>ResisXV_Final_Wireframes_Module5.pdf</td>
+<td>12 key screens plus IA page; editable SVG/HTML and test plan included.</td>
+</tr>
+<tr>
+<td>4 Customer Journey Workflow</td>
+<td>Journey_Walkthrough_ResisXV.html; Journey_Workflow_ResisXV.xlsx</td>
+<td>Branching workflow and detailed table prepared; browser print layout still unverified.</td>
+</tr>
+<tr>
+<td>Required planning exercise</td>
+<td>ResisXV_12_Week_Scrum_Board.pdf; Scrum_Board_ResisXV.xlsx</td>
+<td>58 cards, six sprints, three release milestones; staffing and calendar unconfirmed.</td>
+</tr>
+<tr>
+<td>5 Running design record</td>
+<td>DESIGN_DOC_ResisXV_Module5.md; ResisXV_Module5_Design_Document.pdf</td>
+<td>Current module recorded; earlier modules preserved. Student uploads PDF and replaces context Markdown.</td>
+</tr>
+</tbody></table>
+<h3>Checks performed and their practical limits</h3>
+<p>The Scrum linter rejected a nonexistent story, a premature release story and a missing dependency. The journey checker rejected a nonexistent Controller and an invalid target. The wireframe checker rejected an unknown story and a missing or broken exit. The final story checks confirmed four-part wording, 28 IDs and at least two worker stories per canonical stage. These are structural checks, not evidence of research authenticity, usability, capacity or live feasibility.</p>
+<p>One rendering limitation remains explicit: the customer workflow’s full browser appearance and one-page print layout were not verified because Chromium was unavailable. A minimal-DOM Node VM exercised script execution and routing after an escaping defect was corrected. This is narrower than a real-browser test. The final Word MRD and wireframe PDF were rendered and visually inspected, and spreadsheet previews were reviewed.</p>
+<p>Cross-module limitations remain: the older affinity map still uses provisional stage labels, complete operations-field capture has not been reviewed, and the full operations console is not part of the twelve key screens. Later story and journey releases remain proposed. These open items are not erased by successful ID checks.</p>
+<h3>Student contribution and revision reasoning</h3>
+<p>The student supplied the corrected course skills and two visual examples, asked that the documents match them accurately, requested motel/hostel alternatives, and authorized each next deliverable. Earlier student corrections to funding scope, I4’s budget and excluded-worker effects remained active. The user also clarified that the workflow submission should include HTML and Excel; the response followed the course skill’s deliverable list.</p>
+<p>The design keeps purchaser and worker roles separate. Essential support setup, approval, reconciliation and operations move into R1 prerequisites even though broader purchaser/platform features are later. This is an explicit proposed scope change, not a quiet reclassification of evidence. Native apps and automated provider/payment integrations are deferred because no current core story requires them. These rationales are recorded from the drafting process; they do not invent an earlier student debate.</p>
+<h3>Remaining work and final submission actions</h3>
+<ul>
+<li>Review the final documents and correct missing participant dates, recruitment relationships and I4 identity before presenting the research as fully documented.</li>
+<li>Obtain actual comparable overnight quotes, purchaser authority, rules, worker consent and named operating owners before a live pilot. Public provider listings and hypothetical TAM/SAM/SOM inputs are not those commitments.</li>
+<li>Run the proposed usability study and record observed findings rather than thresholds as results. Verify the workflow in a browser and check its print view.</li>
+<li>Upload the deliverables and the Module 5 design PDF to Canvas. Replace the old running design-document copy in project context with DESIGN_DOC_ResisXV_Module5.md. This session does not perform those external uploads.</li>
+<li>Modules 1 and 2 remain unrecorded because their records were not available. Modules 6-9 remain placeholders for later work.</li>
+</ul>
+<h3>Reusable tools retained</h3>
+<p>Scrum_Card_Linter_ResisXV.py, Journey_Consistency_Check_ResisXV.py, Wireframe_Consistency_Check_ResisXV_Module5.py and Wireframe_Review_Template_ResisXV_Module5.md are included in the handoff. The checker packages retain their input data and recorded negative-control results so their actual scope can be reviewed. The decision log records dated changes without replacing the MRD with a transcript.</p>
+<hr>
+</div></details>
+<details id="record-module-6" class="record-section" open><summary><span>Module 6: Positioning, Go-to-Market and PRD</span><span class="expand" aria-hidden="true">+</span></summary><div class="record-copy"><h2>Module 6: Positioning, Go-to-Market and PRD</h2>
+<p><strong>Status:</strong> recorded to date; assignment work remains open.
+<strong>Session date:</strong> November 12, 2026.
+<strong>Summary:</strong> I prepared the ResisXV PRD, positioning statement and GTM checklist using the Module 5 research and design work. I asked for the PRD to follow the supplied InstaVacay example, reuse the generated persona image and stay close to my original goals, procedures and roadmap. The completed drafting is recorded below. The Innovation Framework exercise, the required three-example PRD scorecard and second iteration, and the requested original-plan correction are not recorded as complete.</p>
+<h3>Goals and source boundaries</h3>
+<p>The current requirements describe an occasional employer-supported stay near work, with an accepted personal cost, confirmed accommodation and a review of actual rest and expense. Sebastián remains the primary research persona; the authorized employer buyer is a separate role. I2 is not established as Sebastián’s employer, and the shared funding range is not a per-worker allowance.</p>
+<p>The PRD carries forward a proposed twelve-week plan with R1 at Week 6, R2 at Week 9 and R3 at Week 12. These are the currently documented milestones, not proof that they match the earlier plan I subsequently asked to restore. The two later Word uploads contain identical extracted paragraph/table text. The original reference I called “PIOGI” has not been identified, so its goals, protocols and roadmap cannot be reconstructed reliably.</p>
+<h3>Tool 6.1</h3>
+<ul>
+<li><strong>Name:</strong> PRD synthesis and illustrated requirements document.</li>
+<li><strong>Job:</strong> Turn the research, stories, workflow and screens into requirements that a product team can review.</li>
+<li><strong>Architecture choice:</strong> Source-led synthesis into Markdown, editable Word and a rendered PDF. The supplied InstaVacay PRD guides structure and narrative; it is not evidence of ResisXV demand.</li>
+<li><strong>Input:</strong> Module 5 MRD, 28-story board, MVC, twelve-week Scrum plan, customer workflow, twelve wireframes and original generated persona illustration; supplied InstaVacay example.</li>
+<li><strong>Output:</strong> PRD_ResisXV.md, PRD_ResisXV.docx and PRD_ResisXV.pdf, plus a source package. The generated PDF has 25 pages, six illustrated use cases, twelve screen references and ten proposed R1 features.</li>
+<li><strong>Human checkpoint:</strong> Confirm business scope, buyer authority, commercial assumptions and operating responsibilities. Check the original-plan reference before accepting the requested correction as finished.</li>
+<li><strong>Success criteria:</strong> The drafting pass checked the twelve screen IDs and ten feature IDs, reviewed all rendered PDF pages and checked cost arithmetic. The source distinguishes interview accounts, demo screens and proposed thresholds. These checks do not validate demand or a live implementation.</li>
+<li><strong>Alternative considered and rejected:</strong> A screen-by-screen tour without tasks would not explain how an accepted stay is funded and completed. The document instead narrates worker, employer and operations steps around specific tasks. Future releases remain higher level than R1.</li>
+<li><strong>Honest limits:</strong> Funding, provider supply, actual rest gain, pricing and staffing are unverified. The engineering rates and coordination fee are planning assumptions. No booking backend was deployed. The full three-example assignment evaluation was not completed by the internal drafting review.</li>
+<li><strong>Revisions:</strong><ul>
+<li>November 12, 2026: produced the 25-page PRD following the example; retained the updated research persona and identified the reused portrait as an illustration.</li>
+<li>November 12, 2026: corrected the proposed shared-budget logic to include both lodging subsidy and employer-paid coordination fee. The older demo screens do not fully display this addition; the PRD discloses the difference.</li>
+</ul>
+</li>
+</ul>
+<h3>Tool 6.2</h3>
+<ul>
+<li><strong>Name:</strong> Positioning and messaging framework.</li>
+<li><strong>Job:</strong> Express the intended offer consistently for the worker and employer buyer.</li>
+<li><strong>Architecture choice:</strong> An eight-section Markdown framework linking the Golden Circle, Moore statement, desired perceptions, three job scenarios, pillars, tagline and source trace.</li>
+<li><strong>Input:</strong> Final MRD, PRD, primary/secondary persona constraints and six-stage journey. No new interview or message test was added.</li>
+<li><strong>Output:</strong> Positioning_ResisXV.md. It contains a 43-word Moore statement matching the PRD, three scenarios and the pillars Recover Time, Clear Support and Choose Freely. Working tagline: “One night near work, with employer support.”</li>
+<li><strong>Human checkpoint:</strong> Review the wording with workers and an authorized buyer. The working tagline is recommended copy, not a recorded user selection or tested message.</li>
+<li><strong>Success criteria:</strong> The recorded checks confirmed eight required sections, a Moore statement under 50 words that matches the PRD, three job scenarios, three two-word pillars, a seven-word tagline and no drafting placeholders.</li>
+<li><strong>Alternative considered and rejected:</strong> Generic claims of an AI advantage, guaranteed savings or an exclusive lodging category lack support. The wording instead identifies occasional stays, clear support and worker choice. The other tagline candidates are retained in the file rather than presented as approved choices.</li>
+<li><strong>Honest limits:</strong> The proposed segment boundary and benefit remain unvalidated. Direct providers or manual employer coordination could offer a similar service. Draft perceptions and stories are not interview quotes, testimonials or observed bookings.</li>
+<li><strong>Revisions:</strong><ul>
+<li>November 12, 2026: completed the framework and carried the PRD Vision forward unchanged, with evidence limits and alternative comparisons.</li>
+</ul>
+</li>
+</ul>
+<h3>Tool 6.3</h3>
+<ul>
+<li><strong>Name:</strong> Go-to-market readiness checklist.</li>
+<li><strong>Job:</strong> Translate the proposed positioning into acquisition, commercial and operational tasks before a pilot.</li>
+<li><strong>Architecture choice:</strong> A Markdown plan with four route decisions, eight business questions, a status table, seven workstreams, a claims register and PRD open items.</li>
+<li><strong>Input:</strong> Positioning_ResisXV.md; PRD pricing, costs, metrics and milestone sections; MRD constraints; customer journey.</li>
+<li><strong>Output:</strong> GTM_Checklist_ResisXV.md. It contains 27 launch items with status, required owner role, target timing and completion evidence.</li>
+<li><strong>Human checkpoint:</strong> Confirm actual buyer authority, supplier terms, worker consent, payment responsibility, arrival support and the cost of delivering the service. Owner roles are not confirmed hires.</li>
+<li><strong>Success criteria:</strong> The recorded checks confirmed eight answered business questions, 27 consistently structured checklist rows and ten classified site claims. The register has three Real entries, zero Measured entries and seven Hypothesis entries; Real means a documented account or artifact exists, not an operating-service outcome.</li>
+<li><strong>Alternative considered and rejected:</strong> Broad paid consumer advertising would not solve missing employer funding. The proposed route is push, vertical and B2B2C, with direct employer sales and employer-mediated worker access. Paid social and subscription tiers are deferred.</li>
+<li><strong>Honest limits:</strong> The route is a proposal, not evidence of sponsorship or conversion. The MXN 50 coordination fee and 2.7–5.3 month outreach-only payback are assumptions. Full CAC, LTV, fixed-cost coverage and staffed arrival support remain unresolved. No leads were contacted by this checklist.</li>
+<li><strong>Revisions:</strong><ul>
+<li>November 12, 2026: completed the GTM plan and separated documented preparation from open launch commitments; retained the PRD’s relative weeks.</li>
+</ul>
+</li>
+</ul>
+<h3>Tool 6.4</h3>
+<ul>
+<li><strong>Name:</strong> Version comparison and original-plan correction review.</li>
+<li><strong>Job:</strong> Identify whether the later PRD can be aligned with the original goals, procedures and roadmap without inventing them.</li>
+<li><strong>Architecture choice:</strong> Read-only paragraph/table extraction and text comparison, combined with the recorded student correction.</li>
+<li><strong>Input:</strong> PRD_ResisXV(1).docx and PRD_ResisXV(2).docx; the instruction to keep design and profiles, restore the original direction and simplify the roadmap.</li>
+<li><strong>Output:</strong> Comparison finding: both supplied Word files contain the same extracted narrative/table text despite differing binary file sizes. The requested substantive revision remains pending the original source.</li>
+<li><strong>Human checkpoint:</strong> Identify or supply the original document called “PIOGI.” Preserve the approved design and profiles; do not treat later proposed thresholds or scope as original decisions.</li>
+<li><strong>Success criteria:</strong> The actual comparison returned no extracted-text differences between the two Word uploads. This supports a narrow version finding, not a claim that their XML, metadata or visual formatting are identical. No missing original goals were filled from memory.</li>
+<li><strong>Alternative considered and rejected:</strong> Assuming the file labelled (1) was the original would not be justified by its contents. The source was requested instead of silently changing the project direction.</li>
+<li><strong>Honest limits:</strong> The original reference is unavailable. A phase/objective/activities/expected-result roadmap table was proposed, but the source-aligned revision has not been delivered. The internal single-example drafting review does not satisfy the assignment’s three-example scorecard and second iteration.</li>
+<li><strong>Revisions:</strong><ul>
+<li>November 12, 2026: recorded the student’s correction and the identical-text finding; left the source-dependent revision open.</li>
+</ul>
+</li>
+</ul>
+<h3>Tool 6.5</h3>
+<ul>
+<li><strong>Name:</strong> Cumulative Module 6 design record.</li>
+<li><strong>Job:</strong> Record completed work, student decisions, actual checks and missing assignment evidence while keeping earlier module history.</li>
+<li><strong>Architecture choice:</strong> Update the running Markdown record and render a cumulative PDF. Earlier module text is preserved as historical evidence, even when it refers to then-future work.</li>
+<li><strong>Input:</strong> DESIGN_DOC_ResisXV_Module5.md; the PRD, positioning and GTM artifacts; visible session instructions, version comparison and supplied GitHub presentation note.</li>
+<li><strong>Output:</strong> DESIGN_DOC_ResisXV_Module6.md and ResisXV_Module6_Design_Document.pdf.</li>
+<li><strong>Human checkpoint:</strong> Review the record, upload the PDF for the assignment and replace the earlier project-context Markdown with the updated file. This action does not submit files to Canvas.</li>
+<li><strong>Success criteria:</strong> The update checks that Modules 3, 4 and 5 remain byte-for-byte unchanged, adds five Module 6 entries and preserves unrecorded future modules. The PDF is rendered and checked for readable pagination and complete fields before delivery.</li>
+<li><strong>Alternative considered and rejected:</strong> A standalone summary would omit the cumulative history. Marking all of Module 6 finished would also erase the unresolved exercise, evaluation and original-plan correction. The record instead states progress and open work separately.</li>
+<li><strong>Honest limits:</strong> This is a record of drafting and review. It does not establish a live service, paid demand, research validation, completed assignment evaluation or Canvas submission. No new skill installation or production integration is claimed.</li>
+<li><strong>Revisions:</strong><ul>
+<li>November 12, 2026: recorded the current Module 6 work and prepared the cumulative handoff requested by the student.</li>
+</ul>
+</li>
+</ul>
+<h3>Assignment status and submission evidence</h3>
+<table>
+<thead>
+<tr>
+<th>Deliverable</th>
+<th>Recorded status</th>
+<th>Remaining action</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Positioning statement</td>
+<td>Prepared in Positioning_ResisXV.md.</td>
+<td>Review proposed wording and test the benefit.</td>
+</tr>
+<tr>
+<td>GTM checklist</td>
+<td>Prepared in GTM_Checklist_ResisXV.md.</td>
+<td>Resolve open launch commitments; checklist completion is not launch approval.</td>
+</tr>
+<tr>
+<td>PRD</td>
+<td>25-page PDF, Word and Markdown prepared.</td>
+<td>Align with the original plan once identified; complete required comparative evaluation and second iteration.</td>
+</tr>
+<tr>
+<td>Marketing website</td>
+<td>Student supplied PRD_Github.html as context, stating a marketing page is published; plans to submit through GitHub.</td>
+<td>Use the functioning site and repository links. This record does not independently audit the deployed page or treat the HTML note as the marketing implementation.</td>
+</tr>
+<tr>
+<td>Innovation Framework exercise</td>
+<td>Not recorded as completed.</td>
+<td>Complete the supplied exercise and retain its output.</td>
+</tr>
+<tr>
+<td>Three-example PRD evaluation</td>
+<td>Not recorded as completed.</td>
+<td>Review all three required examples, produce a scorecard and use it for the next PRD iteration.</td>
+</tr>
+<tr>
+<td>Module 6 design record</td>
+<td>Prepared by this update.</td>
+<td>Student reviews, submits the PDF and replaces the old context Markdown.</td>
+</tr>
+</tbody></table>
+<p>GitHub submission references supplied in the project context:</p>
+<ul>
+<li>Website: <a href="https://rogaandres.github.io/ResisXV/">https://rogaandres.github.io/ResisXV/</a></li>
+<li>Repository: <a href="https://github.com/ROGAAndres/ResisXV">https://github.com/ROGAAndres/ResisXV</a></li>
+</ul>
+<p>These identify the submission destinations; this update does not certify current page content or change the repository.</p>
+<h3>Student contribution and decisions</h3>
+<p>I supplied the InstaVacay example and asked for a similar PRD structure and narrative, with the previously generated persona image. I then requested the positioning document and GTM checklist. I specified that the marketing page would be submitted through GitHub and clarified that the uploaded HTML and GTM file were context, not an instruction to publish or edit them.</p>
+<p>I later asked to preserve the design and persona development while restoring the original goals, protocols and roadmap. That correction remains active. The exact earlier plan must be identified before the narrative is rewritten. Subsequent portrait generation produced separate illustrative images; no replacement of PRD persona images is recorded as completed or authorized by those image requests alone.</p>
+<h3>Checks and their limits</h3>
+<p>The PRD drafting pass reviewed all 25 rendered pages and checked IDs and arithmetic. Positioning checks confirmed the section structure and identical Moore statement. GTM checks counted the eight questions, 27 launch items and ten claims. The two later Word uploads were compared at extracted paragraph/table level and had no text differences.</p>
+<p>These checks establish document consistency only. They do not establish customer demand, funding, suitable rooms, operating capacity, causal rest improvements or successful public deployment. Internal critique against the supplied example is not the separate assignment deliverable requiring three examples, a scorecard and a second iteration.</p>
+<h3>Remaining work</h3>
+<ul>
+<li>Identify the original-plan reference and revise the PRD’s goals, procedures and roadmap against it. Keep the design/profiles and simplify the roadmap presentation.</li>
+<li>Complete the Innovation Framework workflow and save the actual output. No completed innovation exercise is inferred from the PRD.</li>
+<li>Complete the required three-example evaluation, scorecard and revised PRD. Preserve the reasoning behind the changes.</li>
+<li>Check the marketing submission links and claim accuracy as a separate task; no site change is performed by this record.</li>
+<li>Keep live operation at No Go until authorized funding, acceptable supply, worker consent, agreed liabilities and responsible support exist.</li>
+<li>Review and submit this design-record PDF, then replace the older project-context Markdown with the cumulative Module 6 file.</li>
+</ul>
+<h3>Reusable outputs</h3>
+<p>The PRD source, positioning source trace and GTM claims/checklist tables can be reused for the next revision. They remain source-linked documents rather than autonomous agents. Modules 1–2 and 7–9 remain unrecorded; the record does not fill them from inference.</p>
+<hr>
+</div></details>
+<details id="record-module-7" class="record-section" ><summary><span>Module 7: Feature Definitions</span><span class="expand" aria-hidden="true">+</span></summary><div class="record-copy"><h2>Module 7: Feature Definitions</h2>
+<p><strong>Status:</strong> not recorded
+<strong>Session date:</strong>
+<strong>Summary:</strong></p>
+<p><em>(tool entries added on record)</em></p>
+<hr>
+</div></details>
+<details id="record-module-8" class="record-section" ><summary><span>Module 8: Roadmap and Metrics</span><span class="expand" aria-hidden="true">+</span></summary><div class="record-copy"><h2>Module 8: Roadmap and Metrics</h2>
+<p><strong>Status:</strong> not recorded
+<strong>Session date:</strong>
+<strong>Summary:</strong></p>
+<p><em>(tool entries added on record)</em></p>
+<hr>
+</div></details>
+<details id="record-module-9" class="record-section" ><summary><span>Module 9: Go-to-Market Pitch</span><span class="expand" aria-hidden="true">+</span></summary><div class="record-copy"><h2>Module 9: Go-to-Market Pitch</h2>
+<p><strong>Status:</strong> not recorded
+<strong>Session date:</strong>
+<strong>Summary:</strong></p>
+<p><em>(tool entries added on record)</em></p>
+<hr>
+</div></details>
+<details id="record-part-12" class="record-section" ><summary><span>Change Log</span><span class="expand" aria-hidden="true">+</span></summary><div class="record-copy"><h2>Change Log</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Command</th>
+<th>What changed</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>October 15 2026</td>
+<td>Record for module 3 in design document</td>
+<td>Restored the existing three-workflow Module 3 record from the prior project copy; historical text preserved with dated revision additions.</td>
+</tr>
+<tr>
+<td>October 22 2026</td>
+<td>Fill out the design document for module 4</td>
+<td>Recorded seven Module 4 workflows, the student corrections, English deliverables, actual consistency-check controls, open limits and handoff files. Modules 1-2 and 5-9 remain unrecorded.</td>
+</tr>
+<tr>
+<td>October 29 2026</td>
+<td>Fill out the design document for module 5</td>
+<td>Recorded seven Module 5 workflows, student direction, sourced MRD update, 28-story board, delivery/workflow/design files, actual check results and open gates. Modules 3-4 preserved; 1-2 and 6-9 remain unrecorded.</td>
+</tr>
+<tr>
+<td>November 12 2026</td>
+<td>Record Module 6 design work to date</td>
+<td>Added PRD, positioning, GTM, version comparison and cumulative-record workflows. Preserved Modules 3–5. Innovation exercise, three-example evaluation/second iteration and original-plan correction remain open.</td>
+</tr>
+</tbody></table>
+<hr>
+</div></details>
+<details id="record-part-13" class="record-section" ><summary><span>End-of-semester: Toolkit Summary</span><span class="expand" aria-hidden="true">+</span></summary><div class="record-copy"><h2>End-of-semester: Toolkit Summary</h2>
+<p><em>(complete after Module 9: a 250-word index of every tool built, which ones you would keep using on a new idea, and which ones were specific to this venture and would not transfer)</em></p>
+</div></details></div><noscript><p>The sections work without JavaScript. Open them individually or download the PDF. Search and expand-all controls require JavaScript.</p></noscript></div></section></main>
+<footer><div class="wrap footer-inner"><div><b>ResisXV</b>Andrés Rojas · Northwestern University<br>Project page published November 13, 2026</div><div><a href="https://github.com/ROGAAndres/ResisXV">GitHub repository &gt;</a><a href="#top">Back to top ^</a></div></div></footer>
+<script>
+const sections=[...document.querySelectorAll('.record-section')];
+const search=document.querySelector('#record-search');
+document.querySelector('#expand-all').addEventListener('click',()=>sections.filter(s=>!s.hidden).forEach(s=>s.open=true));
+document.querySelector('#collapse-all').addEventListener('click',()=>sections.forEach(s=>s.open=false));
+search.addEventListener('input',()=>{const q=search.value.trim().toLocaleLowerCase();let count=0;for(const s of sections){const hit=!q||s.textContent.toLocaleLowerCase().includes(q);s.hidden=!hit;if(q&&hit)s.open=true;if(hit)count++;}document.querySelector('#no-results').style.display=count?'none':'block';});
+window.addEventListener('beforeprint',()=>{sections.forEach(s=>{s.dataset.printOpen=s.open?'1':'0';s.dataset.printHidden=s.hidden?'1':'0';s.open=true;s.hidden=false;});});
+window.addEventListener('afterprint',()=>{sections.forEach(s=>{s.open=s.dataset.printOpen==='1';s.hidden=s.dataset.printHidden==='1';});});
+</script></body></html>
