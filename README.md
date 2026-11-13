@@ -18,4 +18,4 @@ The documents describe a proposed employer-supported service, not an operating b
 
 ## Website
 
-`index.html` presents the project and includes the full cumulative design record. `Marketing_Site_ResisXV.html` links to the same landing page. All assets are local, and no form collects visitor data.
+`index.html` is the approved customer-facing booking preview: choose a work area and night, review a sample room and cost, then try the stay-request flow. `Marketing_Site_ResisXV.html` redirects to it. Images are embedded. The preview sends no personal data, accepts no payments and creates no real reservations. Coursework documents remain linked above.
